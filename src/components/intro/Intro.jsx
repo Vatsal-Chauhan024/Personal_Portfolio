@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import './Intro.css'
 import Photo from '../../img/photo.png'
@@ -24,7 +25,7 @@ const intro = () => {
         <div className="i-bg">
 
         </div>
-        <img src={Photo} className='i-img' alt="my-photo-error" />
+        <img src={Photo} className='i-img' />
       </div>
     </div>
   )
