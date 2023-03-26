@@ -3,7 +3,7 @@ import "./Contact.css";
 import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import Address from "../../img/address.png";
-import Airform from 'react-airform'
+
 
 
 const Contact = () => {
@@ -33,7 +33,7 @@ const Contact = () => {
             <p className="c-desc">
               <b>What's the Query???</b> Get in Touch.
             </p>
-  <Airform email="adarsh.vc24@gmail.com">
+  <form action="https://airform.io/adarsh.vc24@gmail.com" method="post">
            
               <input type="text" placeholder="Name" name ="user_name"/>
               <input type="text" placeholder="Query" name ="user_subject"/>
@@ -41,7 +41,7 @@ const Contact = () => {
               <textarea rows= "5" name="message" id="" cols="30" placeholder="Description" />
               <button>Submit</button>
            
-  </Airform>
+  </form>
           </div>
         </div>
       </div>
