@@ -12,6 +12,8 @@
   
 }
 .card {
+  z-index: 999;
+  cursor: pointer;
     --background: hsla(216, 32%, 21%, 1) !important; 
   --card-background-color:linear-gradient(to top, #6d20e470 0%, #e7f0fd 100%);
   margin-bottom: 10vw;
