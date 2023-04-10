@@ -20,7 +20,7 @@ const Contact = () => {
                 +91 9426455118
               </div>
               <div className="c-info-item">
-                <img className="c-icon" src={Email} alt="" />
+                <img className="c-icon email" src={Email} alt="" />
                 contact@adarsh_vc24@yahoo.com
               </div>
               <div className="c-info-item">
