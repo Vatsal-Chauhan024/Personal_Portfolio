@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ContactDetails = ({ props, imgProps, colorProps, linkProps, linkContentProps, itemContentProps }) => {
     return (
         <>
-            <div className='flex items-start gap-5' data-aos= "fade-right">
+            <div className='flex items-start gap-5' data-aos= "fade-in">
                 <div className={`${colorProps} text-lg sm:text-2xl mt-1`}>{imgProps}</div>
 
                 <div className='flex flex-col *:font-poppinsR gap-0.5 items-start *:text-sm lg:*:text-base'>

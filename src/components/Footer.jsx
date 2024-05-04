@@ -1,19 +1,6 @@
 import React from 'react'
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-
-
-const FooterArray = [
-  {
-    item: <FaLinkedin/>,
-    itemLink: "https://www.linkedin.com/in/vatsal-chauhan024/"
-  },
-  {
-    item : <FaXTwitter/>,
-    itemLink: "https://twitter.com/Vats24__"
-  }
-]
+import FooterArray from '../data/FooterArray';
 
 const Footer = () => {
   return (

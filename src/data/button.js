@@ -5,8 +5,8 @@ const ButtonArray = [
         borderbg: "border-secondaryColor"
     },
     {
-        item: "Contact Me",
-        itemLink: "",
+        item: "Resume",
+        itemLink: "#",
         borderbg: "border-secondaryColor"
     }
 ]

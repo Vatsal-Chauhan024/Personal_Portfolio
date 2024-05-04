@@ -62,7 +62,11 @@ const ContactForm = () => {
     emailjs.sendForm('service_6trfoaf', 'template_y049i7q', form.current, 'nPK35fwFr1NciqDMp')
     .then((result) => {
        if(result){
-        toast.success("Your Response has been Submitted.")
+        toast.success("Response Submitted.", {
+          position:"top-center",
+          theme: "light",
+          autoClose: 2000
+        })
         setInputValues({
           email: "",
           name: "",
@@ -76,17 +80,12 @@ const ContactForm = () => {
     }, (error) => {
         console.log(error.text);
     });
-
-
-
   }
-
 
   return (
     <>
-      <div className='w-full md:max-w-2xl xl:w-full min-h-96 h-full bg-tertiaryColor dark:bg-hrborder/30 backdrop-blur-md shadow-customshadow rounded-xl p-5 border border-solid dark:border-primary' data-aos = "fade-left">
+      <div className='w-full md:max-w-2xl xl:w-full min-h-96 h-full bg-tertiaryColor dark:bg-hrborder/30 backdrop-blur-md shadow-customshadow rounded-xl p-5 border border-solid dark:border-primary' data-aos = "fade-in">
         <form action="" className='' onSubmit={handleSubmit} ref={form}>
-
           <div className='flex flex-col gap-10'>
             {
               inputArray.map((element, key) => (
@@ -94,7 +93,6 @@ const ContactForm = () => {
                   <Label labelfor={element.labelfor} className="capitalize ">{element.labelfor}</Label>
                   <InputField type={element.type} name={element.name} value={element.value} onChange={handleChange} placeholder={element.placeholder} required={true} />
                 </div>
-
               ))
             }
             <Button className="w-fit !px-4 !text-sm sm:!text-base !py-2 !rounded-md hover:!bg-secondaryColor/70 hover:!text-white">Submit</Button>
