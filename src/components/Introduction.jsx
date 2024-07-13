@@ -33,7 +33,7 @@ const Introduction = () => {
                             {
                                 ButtonArray.map((element, key) => (
                                     <Button key={key} className={`border-2 border-solid ${element.borderbg} }`} onClick={()=>window.location.href = element.itemLink}>
-                                        {key === 1 ? <a href={file} download="Vatsal">
+                                        {key === 1 ? <a href={file} download="Vatsal Chauhan Resume">
                                             {element.item}
                                         </a> : element.item}
                                     </Button>
