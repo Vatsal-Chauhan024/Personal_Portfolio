@@ -26,7 +26,7 @@ const CodingSkills = () => {
                   <div className='outline outline-2 outline-offset-2 outline-hrborder/50 dark:outline-hrborder w-full rounded-2xl h-[6px]'>
                     <div className={` h-full rounded-2xl !duration-500`} style={{ width: inView ? `${element.itemValue}`: "0px", background: `${element.bgIcon}` }} />
                   </div>
-                  <span className='absolute right-0 top-0 dark:text-tertiaryColor/90'>{element.itemValue}</span>
+                  {/* <span className='absolute right-0 top-0 dark:text-tertiaryColor/90'>{element.itemValue}</span> */}
                 </div>
               </div>
             ))}
