@@ -1,4 +1,3 @@
-import React from 'react'
 import Introduction from '../components/Introduction'
 import Layout2 from '../layouts/Layout2'
 import Skills from '../components/Skills'

@@ -1,10 +1,7 @@
-import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
 import Heading from './Heading'
 import ImageField from './ImageField'
-import ButtonArray from '../data/button'
 import profile from "../assets/profile.png"
-import Button from './Button'
-import file from "../data/file.pdf"
 import IntroductionArray from '../data/IntroductionArray'
 
 const Introduction = () => {
@@ -29,7 +26,7 @@ const Introduction = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className='flex items-center justify-center md:justify-normal gap-4'>
+                        {/* <div className='flex items-center justify-center md:justify-normal gap-4'>
                             {
                                 ButtonArray.map((element, key) => (
                                     <Button key={key} className={`border-2 border-solid ${element.borderbg} }`} onClick={()=>window.location.href = element.itemLink}>
@@ -39,7 +36,7 @@ const Introduction = () => {
                                     </Button>
                                 ))
                             }
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
