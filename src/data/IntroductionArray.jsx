@@ -6,17 +6,17 @@ const IntroductionArray = [
     {
         itemIcon: <GrProjects />,
         item: "Industry Projects",
-        itemsContent: "5+",
+        itemsContent: "12+",
     },
     {
         itemIcon: <BsPersonFillCheck/>,
         item: "Satisfied Clients",
-        itemsContent: "10+",
+        itemsContent: "30+",
     },
     {
         itemIcon: <SiZedindustries/>,
         item: "Industrial Experience",
-        itemsContent: "1 Year"
+        itemsContent: "2.5 Year"
     }
 ]
 
