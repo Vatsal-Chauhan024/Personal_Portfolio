@@ -1,95 +1,76 @@
-import todo from "../assets/illustrations/todo.png";
-import ecommerce from "../assets/illustrations/ecommerce.png";
-import portfolio from "../assets/illustrations/portfolio.png";
-import hotel from "../assets/illustrations/hotel.png";
-import assist from "../assets/illustrations/cassist.png";
-import book from "../assets/illustrations/books.png";
-import cars from "../assets/illustrations/cars.png";
-import redux from "../assets/illustrations/redux.png";
-import qrcode from "../assets/illustrations/qrcode.png";
-import signup from "../assets/illustrations/signup.png";
-import api from "../assets/illustrations/api.png"
+import project1 from "../assets/illustrations/project_3.png";
+import project2 from "../assets/illustrations/project_4.png";
+import project3 from "../assets/illustrations/project_5.png"
+import project4 from "../assets/illustrations/project_6.png"
+import project5 from "../assets/illustrations/project_7.png"
+import project6 from "../assets/illustrations/project_8.png"
+import project7 from "../assets/illustrations/project_9.png"
+import project8 from "../assets/illustrations/project_2.png";
+import project9 from "../assets/illustrations/project_1.png";
 
 const CardArray = [
-  {
-    itemIcon: todo,
-    itemTitle: "Todo List",
+   {
+    itemIcon: project1,
+    itemTitle: "Web Based Social Media App",
     itemContent:
-      "A todo list made using latest Tech Stack(MERN), and uploaded to git using github Commands. Fully Responsive for small screen and large Screen devices, efficient implementation using react functional component using v6 routings.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/todo-List",
+      "Led frontend development for a production-grade social media application using React, TypeScript, and Tailwind CSS, integrating Stripe payments and a point-based engagement system for an active user base primarily in Germany.",
+    itemLink: "https://app.firedates.com/dashboard/de",
   },
   {
-    itemIcon: ecommerce,
+    itemIcon: project2,
+    itemTitle: "AI Based Land Registration System",
+    itemContent:
+      "Collaborated with senior developers on the frontend of an AI-based Land Registration System using React, TypeScript, and Tailwind CSS, implementing PDF rendering, custom annotations, dynamic PDF field mapping, and responsive user interfaces.",
+    itemLink:"https://reeva.expert/",
+  },
+
+  {
+    itemIcon: project3,
+    itemTitle: "Cyber Coin",
+    itemContent:
+      "Solely developed the frontend of a production-grade Web3 MLM member portal using React, TypeScript, TanStack Query, Wagmi, and Reown Kit, implementing smart contract integrations, secure wallet connectivity, and responsive user interfaces for national and international users.",
+    itemLink: "https://member.cybercoin.finance/",
+  },
+  {
+    itemIcon: project4,
+    itemTitle: "Cyber Coin Admin",
+    itemContent: "Developed the frontend of a production-grade Web3 MLM admin panel using React, TypeScript, TanStack Query, and Wagmi, collaborating with developers on a live platform serving national and international users.",
+    itemLink: "https://cyber-coin-admin.vercel.app/",
+  },
+  {
+    itemIcon: project5,
+    itemTitle: "Prospera DAO",
+    itemContent:
+      "Independently developed a production-grade Web3 application using React, TypeScript, Tailwind CSS, Wagmi, and smart contract integrations, implementing secure wallet connectivity for a live platform serving national and international users.",
+    itemLink: "https://www.prosperadao.pro/",
+  },
+  {
+    itemIcon: project6,
+    itemTitle: "Prospera DAO Admin",
+    itemContent:
+      "Developed the frontend of a production-grade Web3 admin panel using React, TypeScript, Tailwind CSS, and Ethers.js, implementing smart contract integrations, blockchain interactions, and responsive administrative dashboards for a live platform.",
+    itemLink: "https://prospera-admin-frontend.vercel.app/",
+  },
+      {
+    itemIcon: project8,
     itemTitle: "E-Commerce",
     itemContent:
-      "Designed and developed a clean and modern website using HTML, CSS, and React.js. Deployed on GitHub pages via GitHub Commands.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/E-Commerce",
+      "Developed a modern, responsive eCommerce website using React, TypeScript, Tailwind CSS, and Redux. The application is live in production, featuring reusable components and scalable state management.",
+    itemLink: "https://my-stiqk-dawwn-ecommerce.vercel.app/",
   },
   {
-    itemIcon: portfolio,
-    itemTitle: "Portfolio",
+    itemIcon: project7,
+    itemTitle: "Zeno Traders",
     itemContent:
-      "Complete Personal Portfolio from scratch using Html, CSS, React.js and fully responsive to all devices. Full fledged responsive website hosted on netlify and uploaded on GitHub pages using Github commands.",
-    itemLink: "https://vatsalweb.netlify.app",
+      "Solely developed a high-performance trading website landing page using React, TypeScript, Tailwind CSS, and GSAP, delivering smooth animations, engaging user interactions, and a fully responsive user experience.",
+    itemLink: "https://zenotraders.com/",
   },
   {
-    itemIcon: hotel,
-    itemTitle: "Hotel Recommendation System (Group Project)",
-    itemContent:
-      "Complete Hotel Recommendation System from scratch using Html, CSS, JavaScript, Django and fully responsive to all devices and worked as Front end Developer.",
-    itemLink:
-      "https://github.com/Vatsal-Chauhan024/Hotel-Recommendation-System",
-  },
-  {
-    itemIcon: assist,
-    itemTitle: "CASSIST",
-    itemContent:
-      "Worked in the industrial environment along with the Web Development team and worked on the Frontend Development using React.js  Tailwind CSS.",
-    itemLink: "https://www.doctalks.io/",
-  },
-  {
-    itemIcon: book,
-    itemTitle: "Web Based Book Store App",
-    itemContent:
-      "Developed Fully Responsive Complete Book Store App using React JS, Tailwind CSS, Backend using Firebase. Json Placeholder API, using the ContextAPI or UseContext concept of React.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/Book-Store-Web-App",
-  },
-  {
-    itemIcon: cars,
-    itemTitle: "Car Management Dashboard",
-    itemContent:
-      "Developed MERN Book Store: React, Tailwind CSS, MongoDB backend. Features private routes, CRUD ops, responsive design, deployed for user-friendly experience.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/Car-dashboard",
-  },
-  {
-    itemIcon: redux,
-    itemTitle: "Redux Functionality Project",
-    itemContent:
-      "Built Shopping Cart with Redux Toolkit and Tailwind CSS for efficient state management and modern UI. Led frontend development, ensuring seamless user experience and dynamic cart functionality.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/Redux-project",
-  },
-  {
-    itemIcon: qrcode,
-    itemTitle: "Qr-Code Generator",
-    itemContent:
-      "Create a responsive QR code generator with React, Tailwind CSS, and Redux Toolkit. Input text or URL in a form to dynamically generate QR codes. Ensures a user-friendly experience with modern UI design.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/QR-Generator",
-  },
-  {
-    itemIcon: api,
-    itemTitle: "Custom API Testing with Postman (Mini Project)",
-    itemContent: `
-Develop a custom API testing project using Postman, focusing on CRUD operations. Utilize Postman's features to create, read, update, and delete data via HTTP requests. Ensure thorough testing and validation of API endpoints for reliable functionality and performance.
-`,
-    itemLink: "https://github.com/Vatsal-Chauhan024/Api-testing-postman",
-  },
-  {
-    itemIcon: signup,
-    itemTitle: "Signup/SignIn using JWT",
-    itemContent:
-      "Implement secure user authentication with JWT using MERN stack and Tailwind CSS. Enable seamless signup and signin processes, ensuring robust data encryption and a sleek, responsive interface for optimal user interaction.",
-    itemLink: "https://github.com/Vatsal-Chauhan024/Sigup-using-JWT",
-  },
+    itemIcon: project9,
+    itemTitle: "GSAP Based Landing Page",
+    itemContent:`Developed a fully responsive, animation-rich website using React, GSAP, and Tailwind CSS, delivering smooth user interactions. Managed version control with Git/GitHub and deployed the production-ready application on Vercel.`,
+    itemLink: "https://cocktail-landing-page-tan.vercel.app/",
+  }
 ];
 
 export default CardArray;

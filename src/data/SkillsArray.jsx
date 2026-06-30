@@ -1,32 +1,54 @@
 import { SiAntdesign } from "react-icons/si";
 
-const  SkillsArray = [
-    {
-        iconElement: <SiAntdesign />,
-        iconHeading: "UI Designs Implementation / Responsive Figma Design Implementation",
-        iconPara: "Developed responsive web layouts based on Figma designs, ensuring pixel-perfect rendering across devices. Utilized HTML, CSS, and JavaScript to translate designs into interactive interfaces, focusing on user experience and accessibility."
-    },
-    {
-        iconElement: <SiAntdesign />,
-        iconHeading: "React JS Development",
-        iconPara: "Created dynamic web applications with React JS, leveraging its component-based architecture and state management capabilities. Implemented reusable UI components for efficient development and seamless user interactions, while optimizing performance for enhanced user experience."
-    },
-    {
-        iconElement: <SiAntdesign />,
-        iconHeading: "Tailwind Framework Integration",
-        iconPara: "Employed Tailwind CSS framework to streamline UI development, utilizing its utility-first approach for rapid prototyping. Customized styles with ease, ensuring consistent design patterns and responsive layouts across various viewport sizes, thereby enhancing maintainability and scalability."
-    },
-    {
-        iconElement: <SiAntdesign />,
-        iconHeading: "DaisyUI Framework Utilization",
-        iconPara: " Integrated DaisyUI Framework to expedite frontend development, leveraging its collection of pre-designed components and themes. Achieved consistent and visually appealing UI designs, while reducing development time and ensuring code maintainability through modular components."
-    },
-    {
-        iconElement: <SiAntdesign />,
-        iconHeading: "Lottie Animations Implementation",
-        iconPara: "Incorporated Lottie animations to enrich web interfaces with engaging motion graphics. Utilized JSON-based animations for smooth transitions and interactive visual elements, enhancing user engagement and creating memorable user experiences."
-    },
-]
+const SkillsArray = [
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "Figma to Responsive Website",
+    iconPara:
+      "Convert Figma into pixel-perfect, responsive, and user-friendly websites with clean, maintainable code and cross-browser compatibility.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "React & TypeScript Development",
+    iconPara:
+      "Build fast, scalable, and modern web applications using React, TypeScript, reusable components, and industry best practices for maintainable frontend architecture.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "Web3 Frontend Development",
+    iconPara:
+      "Develop secure Web3 applications with wallet authentication, smart contract integrations, Wagmi, Reown Toolkit, Ethers.js, and seamless blockchain interactions.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "Admin & Member Dashboards",
+    iconPara:
+      "Create feature-rich Admin Panels, Member Panels, CRM dashboards, and MLM platforms with responsive UI, real-time data, and intuitive user experiences.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "GSAP Animations",
+    iconPara:
+      "Design engaging, high-performance landing pages with GSAP, ScrollTrigger, smooth scrolling, and interactive animations that enhance user engagement.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "Tailwind CSS & UI Development",
+    iconPara:
+      "Build modern, responsive interfaces using Tailwind CSS, ShadCN UI, DaisyUI, and reusable design systems optimized for every screen size.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "API & State Management",
+    iconPara:
+      "Integrate REST APIs, TanStack Query, Redux, and modern state management solutions to create fast, efficient, and data-driven web applications.",
+  },
+  {
+    iconElement: <SiAntdesign />,
+    iconHeading: "Frontend Maintenance & Optimization",
+    iconPara:
+      "Optimize performance, improve code quality, fix bugs, enhance UI/UX, and maintain production-ready React applications with clean and scalable code.",
+  },
+];
 
-
-export default SkillsArray
+export default SkillsArray;

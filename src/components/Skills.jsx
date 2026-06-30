@@ -1,4 +1,3 @@
-import React from 'react'
 import SectionHeading from './SectionHeading'
 import SkillsArray from '../data/SkillsArray';
 import IconContent from './IconContent';

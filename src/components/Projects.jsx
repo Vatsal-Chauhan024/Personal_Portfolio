@@ -1,4 +1,3 @@
-import React from 'react'
 import Card from './Card'
 import SectionHeading from './SectionHeading'
 import SubHeading from "./SubHeading"
@@ -12,7 +11,7 @@ const Projects = () => {
           <SectionHeading headingProps="Projects" />
           <SubHeading subheadingprops="Few Insights"/>
           <div className='w-full flex justify-center mt-14'>
-            <div className='flex flex-wrap  justify-center gap-3 lg:gap-5 px-4 md:px-2'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 px-4 md:px-2'>
               {
                 CardArray.map((element, key) => (
                   <Card imgProps={element.itemIcon} titleProps={element.itemTitle} contentProps={element.itemContent} linkProps={element.itemLink} key={key} />
