@@ -16,7 +16,7 @@ const IntroductionArray = [
     {
         itemIcon: <SiZedindustries/>,
         item: "Industrial Experience",
-        itemsContent: "2.5 Year"
+        itemsContent: "2 Year"
     }
 ]
 
