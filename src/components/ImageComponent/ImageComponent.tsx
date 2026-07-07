@@ -4,7 +4,7 @@ import { ImageComponentProps } from "@/types/Component"
 import BasicSkeletonLoader from "../Loaders/BasicSkeletonLoader"
 
 const ImageComponent = (props: ImageComponentProps) => {
-  const { imgUrl, className = "" } = props
+  const { imgUrl, className = "", onPressImage } = props
   const [isLoadingImage, setIsLoadingImage] = useState(true)
   const [imageToRender, setImageToRender] = useState(imgUrl)
 
@@ -23,7 +23,15 @@ const ImageComponent = (props: ImageComponentProps) => {
   }, [imgUrl])
 
   return (
-    <div className={className}>
+    <div
+      className={className}
+      onClick={e => {
+        if (onPressImage) {
+          e.stopPropagation()
+          onPressImage()
+        }
+      }}
+    >
       {isLoadingImage ? (
         <BasicSkeletonLoader />
       ) : imageToRender !== "" ? (

@@ -1,29 +1,26 @@
-import { NavLink } from "react-router-dom"
-
 import { Constant } from "@/helpers"
-import StaggerContainer from "../StaggerContainer/StaggerContainer"
 
-const NavComponent = (props: { animateNow: boolean }) => {
-    const { animateNow } = props
-    return (
-        <StaggerContainer
-            className="flex  items-center font-semibold text-primary"
-            performAction={animateNow}
-        >
-            {Constant.NavArray.map(item => {
-                const { id, name } = item
-                return (
-                    <NavLink
-                        className="basic_hover_animation px-4 hover:text-primary-light opacity-0"
-                        key={id}
-                        to={id}
-                    >
-                        {name}
-                    </NavLink>
-                )
-            })}
-        </StaggerContainer>
-    )
+type NavComponentProps = {
+  className?: string
+  onLinkClick?: (id: string) => void
 }
+
+const NavComponent = ({ className = "", onLinkClick }: NavComponentProps) => (
+  <div
+    className={`flex items-center gap-5 ${className}`}
+    id="stagger_elements"
+  >
+    {Constant.NavArray.map(item => (
+      <button
+        className="basic_hover_animation px-4 text-primary hover:text-primary-light"
+        key={item.id}
+        onClick={() => onLinkClick?.(item.id)}
+        type="button"
+      >
+        {item.name}
+      </button>
+    ))}
+  </div>
+)
 
 export default NavComponent

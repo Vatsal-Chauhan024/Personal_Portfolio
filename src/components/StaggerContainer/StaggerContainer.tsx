@@ -5,14 +5,15 @@ import { memo, useRef } from "react"
 import { StaggerContainerProps } from "@/types/Component"
 
 const StaggerContainer = (props: StaggerContainerProps) => {
-  const { children, className = "", performAction = true, staggerAmount = 0.3 } = props
+  const { children, className = "", performAction = true, staggerAmount = 0.3, id = "" } = props
   const mainContainerRef = useRef<HTMLDivElement | null>(null)
 
   useGSAP(
     () => {
       if (!mainContainerRef.current || !performAction) return
       const container = mainContainerRef.current
-      const elements = gsap.utils.toArray<HTMLElement>(container.children)
+      const element = document.getElementById(id)
+      const elements = gsap.utils.toArray<HTMLElement>(element?.children ?? container.children)
 
       gsap.fromTo(
         elements,
@@ -20,7 +21,7 @@ const StaggerContainer = (props: StaggerContainerProps) => {
           y: -10
         },
         {
-          duration: 0.5,
+          duration: 1,
           ease: "power3.out",
           opacity: 1,
           stagger: staggerAmount,

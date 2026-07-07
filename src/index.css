@@ -84,35 +84,37 @@
   }
 }
 
-@layer utilities {
-  .basic_hover_animation {
-    @apply transition-opacity duration-200 ease-in;
-  }
+@utility basic_hover_animation {
+  @apply transition-opacity duration-200 ease-in;
+}
 
-  .hero_title {
-    @apply text-6xl lg:text-8xl xl:text-9xl font-extrabold tracking-[-0.06em];
-  }
-  .h2_heading {
-    @apply text-4xl lg:text-6xl font-bold tracking-[-0.05em];
-  }
-  .h3_heading {
-    @apply text-2xl lg:text-3xl font-bold tracking-[-0.04em];
-  }
-  .h4_heading {
-    @apply text-xl font-semibold tracking-[-0.03em];
-  }
-  .large_body {
-    @apply text-lg font-normal tracking-normal;
-  }
-  .normal_body {
-    @apply text-base tracking-normal;
-  }
-  .small_text {
-    @apply text-sm;
-  }
-  .label_text {
-    @apply text-xs uppercase tracking-[0.2em];
-  }
+@utility hero_title {
+  @apply text-6xl lg:text-8xl xl:text-9xl font-extrabold tracking-[-0.06em];
+}
+@utility h2_heading {
+  @apply text-4xl lg:text-6xl font-bold tracking-tighter;
+}
+@utility h3_heading {
+  @apply text-2xl lg:text-3xl font-bold tracking-[-0.04em];
+}
+@utility h4_heading {
+  @apply text-xl font-semibold tracking-[-0.03em];
+}
+@utility large_body {
+  @apply text-lg font-normal tracking-normal;
+}
+@utility normal_body {
+  @apply text-base tracking-normal;
+}
+@utility small_text {
+  @apply text-sm;
+}
+@utility label_text {
+  @apply text-xs uppercase tracking-[0.2em];
+}
+@utility white__filter {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%) hue-rotate(316deg)
+    brightness(101%) contrast(101%);
 }
 
 .skeleton_loader {
