@@ -29,3 +29,18 @@ export interface OpacityContainerProps {
   onCompleteAnimation?: () => void
   to?: gsap.TweenVars
 }
+
+export interface HeadingComponentProps
+  extends Required<Pick<GeneralProps, "singleLineContent">>,
+    Pick<GeneralProps, "className"> {
+  heading_variant?:
+    | "hero"
+    | "h2_type"
+    | "h3_type"
+    | "h4_type"
+    | "large_type"
+    | "normal_type"
+    | "small_type"
+    | "label_type"
+  id?: string
+}

@@ -1,3 +1,4 @@
+import InsideLayout from "./InsideLayout"
 import Layout from "./Layout"
 
-export { Layout }
+export { InsideLayout, Layout }

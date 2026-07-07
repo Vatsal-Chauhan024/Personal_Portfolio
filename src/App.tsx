@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 import { Header } from "./components"
-import { Layout } from "./layouts"
+import { InsideLayout, Layout } from "./layouts"
+import HeroSection from "./sections/HeroSection"
 
 const App = () => {
   return (
@@ -11,7 +12,9 @@ const App = () => {
           element={
             <Layout>
               <Header />
-              <h2>Hello There how you doing?.....</h2>
+              <InsideLayout>
+                <HeroSection />
+              </InsideLayout>
             </Layout>
           }
           index

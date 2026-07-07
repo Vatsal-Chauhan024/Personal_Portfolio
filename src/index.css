@@ -25,8 +25,6 @@
 
   --shadow: rgba(124, 58, 237, 0.25);
   --shadow-orange: rgba(249, 115, 22, 0.25);
-
-  --glass: rgba(255, 255, 255, 0.04);
 }
 
 @theme {
@@ -88,8 +86,15 @@
   @apply transition-opacity duration-200 ease-in;
 }
 
+@utility linear_gradient_utility {
+  @apply bg-linear-to-r from-white via-primary-light to-primary bg-clip-text text-transparent;
+
+  background-size: 200% 200%;
+  animation: background_effect 6s ease-in-out infinite;
+}
+
 @utility hero_title {
-  @apply text-6xl lg:text-8xl xl:text-9xl font-extrabold tracking-[-0.06em];
+  @apply text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-extrabold tracking-[-0.06em] uppercase;
 }
 @utility h2_heading {
   @apply text-4xl lg:text-6xl font-bold tracking-tighter;
@@ -147,5 +152,17 @@
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+@keyframes background_effect {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 20% 90%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
