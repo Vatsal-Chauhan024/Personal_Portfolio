@@ -98,7 +98,7 @@ const About = () => {
                             return (
                                 <AboutCards
                                     {...about}
-                                    className={Constant.AboutStats?.length % 2 !== 0 && index === Constant.AboutStats?.length - 1 ? 'col-span-2' : 'col-span-1'}
+                                    className={Constant.AboutStats?.length % 2 !== 0 && index === Constant.AboutStats?.length - 1 ? 'sm:col-span-2' : ''}
                                     key={id}
                                 />
                             )

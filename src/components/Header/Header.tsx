@@ -49,10 +49,7 @@ const Header = () => {
                 const section = document.getElementById(id)
 
                 if (scroller && section) {
-                  scroller.scrollTo({
-                    behavior: "smooth",
-                    top: section.offsetTop
-                  })
+                  section.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
               }}
             />
