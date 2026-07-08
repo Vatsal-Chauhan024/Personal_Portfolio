@@ -1,5 +1,5 @@
 import { gsap } from "gsap"
-import type { ReactNode } from "react"
+import type { HTMLAttributes, InputHTMLAttributes, ReactNode } from "react"
 
 export interface GeneralProps {
   children?: ReactNode
@@ -43,4 +43,32 @@ export interface HeadingComponentProps
     | "small_type"
     | "label_type"
   id?: string
+}
+
+export interface ButtonComponentProps
+  extends HTMLAttributes<HTMLButtonElement>,
+    Pick<GeneralProps, "className"> {
+  buttonContent: string
+  imageUrl?: string
+  variant?: "filled" | "outline" | "ghost"
+}
+
+export interface InViewSplitTextProps extends Required<Pick<GeneralProps, "children">> {
+  id: string
+  position?: gsap.Position
+  timeLine?: GSAPTimeline
+  type: "chars" | "words"
+}
+export interface InViewStaggerElementProps
+  extends Required<Pick<GeneralProps, "children">>,
+    Pick<InViewSplitTextProps, "id" | "position" | "timeLine"> {
+  duration?: number
+  staggerAmount?: number
+}
+
+export interface AboutCardProps extends Pick<GeneralProps, "className"> {
+  id: number
+  subtitle: string
+  title: string
+  value: string
 }

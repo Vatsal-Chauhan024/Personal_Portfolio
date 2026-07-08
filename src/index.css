@@ -22,9 +22,14 @@
 
   --border: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.16);
+  --glass-bg: rgba(124, 58, 237, 0.08);
+  --glass-bg-hover: rgba(124, 58, 237, 0.12);
 
-  --shadow: rgba(124, 58, 237, 0.25);
-  --shadow-orange: rgba(249, 115, 22, 0.25);
+  --glass-border: rgba(168, 85, 247, 0.18);
+  --glass-border-hover: rgba(168, 85, 247, 0.35);
+  --shadow-purple-sm: 0 4px 20px rgba(124, 58, 237, 0.12);
+  --shadow-purple-md: 0 10px 35px rgba(124, 58, 237, 0.18);
+  --shadow-purple-lg: 0 18px 60px rgba(124, 58, 237, 0.28);
 }
 
 @theme {
@@ -60,8 +65,18 @@
   }
 
   body {
-    @apply min-h-screen overflow-x-hidden bg-background text-white antialiased;
+    @apply min-h-screen overflow-hidden text-white antialiased;
+
     font-family: "Inter", sans-serif;
+
+    background:
+      radial-gradient(ellipse 70% 50% at 50% -10%, rgba(124, 58, 237, 0.18), transparent 70%),
+      radial-gradient(ellipse 25% 30% at 10% 85%, rgba(91, 33, 182, 0.1), transparent 70%),
+      radial-gradient(ellipse 25% 30% at 90% 70%, rgba(168, 85, 247, 0.08), transparent 70%),
+      linear-gradient(180deg, #0b0b0f 0%, #09090b 35%, #07070a 100%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   ::selection {
@@ -91,6 +106,26 @@
 
   background-size: 200% 200%;
   animation: background_effect 6s ease-in-out infinite;
+}
+
+.underline_class {
+  position: relative;
+  display: inline-block;
+  --underline-width: 0%;
+}
+
+.underline_class::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: var(--underline-width);
+  height: 2px;
+
+  background: var(--color-primary);
+
+  transition: none;
 }
 
 @utility hero_title {
@@ -144,6 +179,31 @@
   );
   background-repeat: no-repeat;
   animation: shimmer_effect 1s linear infinite;
+}
+
+@utility glass_card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid var(--glass-border);
+
+  box-shadow: var(--glass-highlight), var(--shadow-purple-md);
+
+  transition:
+    background 300ms ease,
+    border-color 300ms ease,
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.glass_card:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+
+  box-shadow: var(--glass-highlight), var(--shadow-purple-lg), var(--glow-purple);
+
+  transform: translateY(-6px);
 }
 
 @keyframes shimmer_effect {

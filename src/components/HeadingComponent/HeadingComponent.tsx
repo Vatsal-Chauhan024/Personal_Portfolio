@@ -25,7 +25,7 @@ const HeadingComponent = (props: HeadingComponentProps) => {
 
   return (
     <p
-      className={`linear_gradient_utility bg-clip-text text-transparent ${classToUse} ${className}`}
+      className={` text-primary-light ${classToUse} ${className}`}
       id={id}
     >
       {singleLineContent}

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 import LogoComponent from "../LogoComponent/LogoComponent"
 import OpacityContainer from "../OpacityContainer/OpacityContainer"
@@ -10,7 +9,6 @@ import NavComponent from "./NavComponent"
 const Header = () => {
   const [isAnimateNow, setIsAnimateNow] = useState(false)
   const [showMobileMenu, setShowMobileMenu] = useState(window.innerWidth < 768)
-  const navigate = useNavigate()
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,7 +24,7 @@ const Header = () => {
 
   return (
     <OpacityContainer
-      className="p-5 fixed inset-0 h-20 text-primary z-30 w-screen bg-background-secondary/50 backdrop-blur-lg"
+      className="px-12 py-5 fixed inset-0 h-20 text-primary z-30 w-screen bg-background-secondary/50 backdrop-blur-lg"
       from={{
         height: 0
       }}
@@ -47,13 +45,22 @@ const Header = () => {
             <NavComponent
               className="*:opacity-0"
               onLinkClick={id => {
-                navigate(id)
+                const scroller = document.getElementById("scroller")
+                const section = document.getElementById(id)
+
+                if (scroller && section) {
+                  scroller.scrollTo({
+                    behavior: "smooth",
+                    top: section.offsetTop
+                  })
+                }
               }}
             />
           </StaggerContainer>
         ) : (
           <MenuBtn />
-        )}
+        )
+        }
       </div>
     </OpacityContainer>
   )

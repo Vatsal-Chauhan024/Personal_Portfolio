@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 import { Header } from "./components"
 import { InsideLayout, Layout } from "./layouts"
+import About from "./sections/About"
 import HeroSection from "./sections/HeroSection"
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
               <Header />
               <InsideLayout>
                 <HeroSection />
+                <About />
               </InsideLayout>
             </Layout>
           }
