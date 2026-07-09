@@ -3,7 +3,7 @@ import { GeneralProps } from "@/types/Component"
 
 const Layout = (props: Required<Pick<GeneralProps, "children">>) => {
   const { children } = props
-  return <div className="py-5 px-12 h-screen w-screen overflow-y-auto" id="scroller">
+  return <div className="py-5 px-5 md:px-8 lg:px-12 h-screen w-screen overflow-y-auto" id="scroller">
     <BlurComponent />
     {children}</div>
 }

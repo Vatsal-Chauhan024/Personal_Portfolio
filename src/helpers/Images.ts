@@ -1,8 +1,31 @@
 const Images = {
+  axios: new URL("../assets/svgs/axios.svg", import.meta.url).href,
+  biome: new URL("../assets/svgs/biome.svg", import.meta.url).href,
+  blockchain: new URL("../assets/svgs/blockchain.svg", import.meta.url).href,
   close: new URL("../assets/svgs/close.svg", import.meta.url).href,
+  css: new URL("../assets/svgs/css.svg", import.meta.url).href,
+  daisyui: new URL("../assets/svgs/daisyui.svg", import.meta.url).href,
+  eslint: new URL("../assets/svgs/eslint.svg", import.meta.url).href,
+  fork: new URL("../assets/svgs/fork.svg", import.meta.url).href,
+  git: new URL("../assets/svgs/git.svg", import.meta.url).href,
+  github: new URL("../assets/svgs/github.svg", import.meta.url).href,
+  gsap: new URL("../assets/svgs/gsap.svg", import.meta.url).href,
+  html: new URL("../assets/svgs/html.svg", import.meta.url).href,
+  javascript: new URL("../assets/svgs/javascript.svg", import.meta.url).href,
+  lark: new URL("../assets/svgs/lark.svg", import.meta.url).href,
+  lefthook: new URL("../assets/svgs/lefthook.svg", import.meta.url).href,
   logo: new URL("../assets/svgs/logo.svg", import.meta.url).href,
   menu: new URL("../assets/svgs/menu.svg", import.meta.url).href,
-  reactLogo: new URL("../assets/react.svg", import.meta.url).href
+  postman: new URL("../assets/svgs/postman.svg", import.meta.url).href,
+  prettier: new URL("../assets/svgs/prettier.svg", import.meta.url).href,
+  reactLogo: new URL("../assets/react.svg", import.meta.url).href,
+  shadcn: new URL("../assets/svgs/shadcn.svg", import.meta.url).href,
+  tailwind: new URL("../assets/svgs/tailwind.svg", import.meta.url).href,
+  typescript: new URL("../assets/svgs/typescript.svg", import.meta.url).href,
+  vercel: new URL("../assets/svgs/vercel.svg", import.meta.url).href,
+  vscode: new URL("../assets/svgs/vscode.svg", import.meta.url).href,
+  wagmi: new URL("../assets/svgs/wagmi.svg", import.meta.url).href,
+  zoho: new URL("../assets/svgs/zoho.svg", import.meta.url).href
 }
 
 export default Images

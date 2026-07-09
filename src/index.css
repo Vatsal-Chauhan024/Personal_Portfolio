@@ -213,10 +213,9 @@
 
   background-color: var(--glass-bg);
   border-color: var(--glass-border);
-  box-shadow: var(--shadow-purple-md);
 }
 @utility elevated_surface_hover {
-  @apply hover:-translate-y-2 hover:border-primary/40;
+  @apply hover:border-primary/40;
 
   &:hover {
     box-shadow: var(--shadow-purple-lg);

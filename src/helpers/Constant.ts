@@ -1,4 +1,5 @@
 import English from "./English"
+import Images from "./Images"
 
 const Constant = {
   AboutStats: [
@@ -34,6 +35,46 @@ const Constant = {
     {
       id: "projects",
       name: English.E6
+    }
+  ],
+  ProjectsArray: [
+    {
+      category: "Web Application",
+
+      featured: true,
+
+      features: [
+        "Live Market Data",
+        "TradingView Charts",
+        "Binance WebSocket",
+        "Referral System",
+        "Responsive UI"
+      ],
+
+      githubUrl: "...",
+      id: "01",
+
+      image: Images.biome,
+
+      liveUrl: "...",
+
+      longDescription:
+        "Developed a production-ready trading platform supporting live market updates, referral systems, custom charting experiences and high-performance UI for active traders.",
+
+      shortDescription:
+        "Real-time cryptocurrency trading platform with TradingView charts, Binance WebSockets and advanced market analytics.",
+
+      technologies: [
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "GSAP",
+        "Socket.io",
+        "TradingView",
+        "Tailwind CSS"
+      ],
+      title: "Trading Platform",
+      year: "2025"
     }
   ],
   ServicesArray: [
@@ -79,6 +120,146 @@ const Constant = {
       label: "Collaboration",
       title: "Client Communication"
     }
+  ],
+  SkillsMarqueeArray: [
+    [
+      {
+        category: "Language",
+        img: Images.html,
+        name: "HTML"
+      },
+      {
+        category: "Language",
+        img: Images.css,
+        name: "CSS"
+      },
+      {
+        category: "Language",
+        img: Images.javascript,
+        name: "JavaScript"
+      },
+      {
+        category: "Language",
+        img: Images.typescript,
+        name: "TypeScript"
+      },
+      {
+        category: "Frontend",
+        img: Images.reactLogo,
+        name: "React"
+      },
+      {
+        category: "Styling",
+        img: Images.tailwind,
+        name: "Tailwind CSS"
+      },
+      {
+        category: "Animation",
+        img: Images.gsap,
+        name: "GSAP"
+      },
+      {
+        category: "Component Library",
+        img: Images.shadcn,
+        name: "ShadCN UI"
+      },
+      {
+        category: "Component Library",
+        img: Images.daisyui,
+        name: "DaisyUI"
+      }
+    ],
+
+    [
+      {
+        category: "Data Fetching",
+        img: Images.axios,
+        name: "Axios"
+      },
+      {
+        category: "Server State",
+        img: "",
+        name: "TanStack Query"
+      },
+      {
+        category: "Web3",
+        img: Images.wagmi,
+        name: "Wagmi"
+      },
+      {
+        category: "Wallet Connection",
+        img: "",
+        name: "Reown AppKit"
+      },
+      {
+        category: "Blockchain",
+        img: Images.blockchain,
+        name: "Smart Contract Integration"
+      },
+      {
+        category: "Version Control",
+        img: Images.git,
+        name: "Git"
+      },
+      {
+        category: "Git Client",
+        img: Images.github,
+        name: "GitHub Desktop"
+      },
+      {
+        category: "Git Client",
+        img: Images.fork,
+        name: "Fork"
+      },
+      {
+        category: "Deployment",
+        img: Images.vercel,
+        name: "Vercel"
+      }
+    ],
+
+    [
+      {
+        category: "Editor",
+        img: Images.vscode,
+        name: "VS Code"
+      },
+      {
+        category: "API Testing",
+        img: Images.postman,
+        name: "Postman"
+      },
+      {
+        category: "Code Formatter",
+        img: Images.prettier,
+        name: "Prettier"
+      },
+      {
+        category: "Linting",
+        img: Images.eslint,
+        name: "ESLint"
+      },
+      {
+        category: "Code Quality",
+        img: Images.biome,
+        name: "Biome"
+      },
+      {
+        category: "Git Hooks",
+        img: Images.lefthook,
+        name: "Lefthook"
+      },
+      {
+        category: "Project Management",
+        img: Images.zoho,
+        name: "Zoho Projects"
+      },
+      {
+        category: "Team Collaboration",
+        img: Images.lark,
+        name: "Lark"
+      }
+    ]
   ]
 }
 
