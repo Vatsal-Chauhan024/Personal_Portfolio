@@ -3,6 +3,7 @@ import BlurComponent from "./BlurComponent/BlurComponent"
 import CommonButton from "./Buttons/CommonButton"
 import AboutCards from "./Cards/AboutCards"
 import ServiceCard from "./Cards/ServiceCard"
+import ContactForm from "./ContactForm/ContactForm"
 import Header from "./Header/Header"
 import MenuBtn from "./Header/MenuBtn"
 import HeadingComponent from "./HeadingComponent/HeadingComponent"
@@ -16,6 +17,7 @@ export {
   BasicSkeletonLoader,
   BlurComponent,
   CommonButton,
+  ContactForm,
   Header,
   HeadingComponent,
   ImageComponent,

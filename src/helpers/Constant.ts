@@ -22,6 +22,26 @@ const Constant = {
       value: "30+"
     }
   ],
+  ContactUsArray: [
+    {
+      content: "adarsh_vc24@yahoo.com",
+      imageUrl: Images.email,
+      name: "email",
+      title: "Email"
+    },
+    {
+      content: "https://www.linkedin.com/in/vatsal-chauhan024/",
+      imageUrl: Images.linkedIn,
+      name: "linkedIn",
+      title: "LinkedIn"
+    },
+    {
+      content: "https://github.com/Vatsal-Chauhan024",
+      imageUrl: Images.github,
+      name: "github",
+      title: "Github"
+    }
+  ],
   NavArray: [
     {
       id: "about",

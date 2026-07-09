@@ -13,6 +13,7 @@ const Images = {
 
   dating: new URL("../assets/static_assets/dating.png", import.meta.url).href,
   ecommerce: new URL("../assets/static_assets/ecommerce.png", import.meta.url).href,
+  email: new URL("../assets/svgs/email.svg", import.meta.url).href,
   eslint: new URL("../assets/svgs/eslint.svg", import.meta.url).href,
   fork: new URL("../assets/svgs/fork.svg", import.meta.url).href,
   git: new URL("../assets/svgs/git.svg", import.meta.url).href,
@@ -23,6 +24,7 @@ const Images = {
   javascript: new URL("../assets/svgs/javascript.svg", import.meta.url).href,
   lark: new URL("../assets/static_assets/lark.png", import.meta.url).href,
   lefthook: new URL("../assets/svgs/lefthook.svg", import.meta.url).href,
+  linkedIn: new URL("../assets/svgs/linkedIn.svg", import.meta.url).href,
   logo: new URL("../assets/svgs/logo.svg", import.meta.url).href,
   menu: new URL("../assets/svgs/menu.svg", import.meta.url).href,
   postman: new URL("../assets/svgs/postman.svg", import.meta.url).href,
