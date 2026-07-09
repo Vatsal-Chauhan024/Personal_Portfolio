@@ -4,6 +4,7 @@ import { Header } from "./components"
 import { InsideLayout, Layout } from "./layouts"
 import About from "./sections/About"
 import HeroSection from "./sections/HeroSection"
+import Projects from "./sections/projects/Projects"
 import Services from "./sections/Services"
 import Skills from "./sections/Skills"
 
@@ -20,6 +21,7 @@ const App = () => {
                 <About />
                 <Services />
                 <Skills />
+                <Projects />
               </InsideLayout>
             </Layout>
           }

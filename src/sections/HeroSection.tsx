@@ -65,7 +65,7 @@ const HeroSection = () => {
 
     return (
         <section
-            className="space-y-12 relative pt-20 h-screen"
+            className="space-y-12 relative py-20 h-screen"
             id="hero"
         >
             <div>

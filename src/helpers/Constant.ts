@@ -39,42 +39,200 @@ const Constant = {
   ],
   ProjectsArray: [
     {
-      category: "Web Application",
+      category: "Production Web Application",
 
-      featured: true,
-
-      features: [
-        "Live Market Data",
-        "TradingView Charts",
-        "Binance WebSocket",
-        "Referral System",
-        "Responsive UI"
-      ],
-
-      githubUrl: "...",
+      features: ["Stripe Payments", "Reward System", "Responsive UI", "Reusable Components"],
+      githubUrl: "",
       id: "01",
 
-      image: Images.biome,
+      image: Images.dating,
 
-      liveUrl: "...",
+      liveUrl: "https://app.firedates.com/dashboard/de",
 
       longDescription:
-        "Developed a production-ready trading platform supporting live market updates, referral systems, custom charting experiences and high-performance UI for active traders.",
+        "Led frontend development of a production-grade social media application using React, TypeScript, and Tailwind CSS. Implemented Stripe payment integration, reusable component architecture, and a point-based engagement system for users primarily based in Germany.",
 
       shortDescription:
-        "Real-time cryptocurrency trading platform with TradingView charts, Binance WebSockets and advanced market analytics.",
+        "Production-ready social media platform with Stripe payments and engagement rewards.",
+
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Stripe", "Axios", "Redux Toolkit"],
+      title: "Web Based Social Media App",
+      year: "2025"
+    },
+
+    {
+      category: "AI Powered Web Platform",
+
+      features: ["PDF Rendering", "Annotations", "AI Workflow", "Dynamic Forms"],
+      githubUrl: "",
+      id: "02",
+
+      image: Images.ai_based,
+
+      liveUrl: "https://reeva.expert/",
+
+      longDescription:
+        "Collaborated on the frontend development of an AI-based land registration system, implementing PDF rendering, annotation tools, dynamic field mapping, and responsive user interfaces for document workflows.",
+
+      shortDescription: "AI-powered document management and land registration platform.",
+
+      technologies: ["React", "TypeScript", "Tailwind CSS", "PDF.js", "Canvas API"],
+      title: "AI Based Land Registration System",
+      year: "2025"
+    },
+
+    {
+      category: "Web3 Member Portal",
+
+      features: ["Wallet Connect", "Smart Contracts", "Blockchain Transactions", "Responsive UI"],
+      githubUrl: "",
+      id: "03",
+
+      image: Images.cyber_member,
+
+      liveUrl: "https://member.cybercoin.finance/",
+
+      longDescription:
+        "Independently developed the complete frontend of a Web3 member portal using React, TypeScript, TanStack Query, Wagmi, and Reown Kit. Integrated smart contracts, wallet authentication, and blockchain interactions for international users.",
+
+      shortDescription: "Production Web3 MLM member portal with blockchain integration.",
+
+      technologies: ["React", "TypeScript", "TanStack Query", "Wagmi", "Reown Kit", "Tailwind CSS"],
+      title: "Cyber Coin Member",
+      year: "2025"
+    },
+
+    {
+      category: "Web3 Admin Dashboard",
+
+      features: ["Admin Dashboard", "Wallet Integration", "Blockchain Data", "Role Management"],
+      githubUrl: "",
+      id: "04",
+
+      image: Images.cyber_admin,
+
+      liveUrl: "https://cyber-coin-admin.vercel.app/",
+
+      longDescription:
+        "Developed the frontend of a production-grade Web3 admin panel with blockchain integrations, secure administrative workflows, and scalable dashboard architecture.",
+
+      shortDescription: "Administrative dashboard for managing Web3 MLM operations.",
+
+      technologies: ["React", "TypeScript", "TanStack Query", "Wagmi", "Tailwind CSS", "Reown Kit"],
+      title: "Cyber Coin Admin",
+      year: "2025"
+    },
+
+    {
+      category: "Web3 Application",
+
+      features: ["Wallet Connect", "Smart Contracts", "Blockchain", "Responsive Design"],
+      githubUrl: "",
+      id: "05",
+
+      image: Images.prospera_member,
+
+      liveUrl: "https://www.prosperadao.pro/",
+
+      longDescription:
+        "Built the complete frontend of a production-grade Web3 application featuring secure wallet connections, blockchain interactions, and responsive user experiences.",
+
+      shortDescription: "Production decentralized application with secure wallet connectivity.",
 
       technologies: [
         "React",
         "TypeScript",
-        "Redux Toolkit",
-        "GSAP",
-        "Socket.io",
-        "TradingView",
-        "Tailwind CSS"
+        "Tailwind CSS",
+        "Wagmi",
+        "Smart Contracts",
+        "Reown Kit"
       ],
-      title: "Trading Platform",
+      title: "Prospera DAO",
       year: "2025"
+    },
+
+    {
+      category: "Web3 Admin Dashboard",
+
+      features: ["Admin Dashboard", "Blockchain", "Smart Contracts", "Responsive UI"],
+      githubUrl: "",
+      id: "06",
+
+      image: Images.prospera_admin,
+
+      liveUrl: "https://prospera-admin-frontend.vercel.app/",
+
+      longDescription:
+        "Developed a production-grade Web3 admin dashboard using React, TypeScript, Tailwind CSS, and Ethers.js with secure blockchain interactions and responsive administration panels.",
+
+      shortDescription: "Administrative dashboard for decentralized ecosystem management.",
+
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Ethers.js", "Smart Contracts"],
+      title: "Prospera DAO Admin",
+      year: "2025"
+    },
+
+    {
+      category: "E-Commerce Website",
+
+      features: ["Shopping Cart", "Redux", "Responsive Design", "Reusable Components"],
+      githubUrl: "",
+      id: "07",
+
+      image: Images.ecommerce,
+
+      liveUrl: "https://my-stiqk-dawwn-ecommerce.vercel.app/",
+
+      longDescription:
+        "Built a responsive eCommerce application with scalable Redux architecture, reusable components, and optimized frontend performance using React, TypeScript, and Tailwind CSS.",
+
+      shortDescription: "Modern production-ready eCommerce platform.",
+
+      technologies: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
+      title: "E-Commerce Platform",
+      year: "2024"
+    },
+
+    {
+      category: "Trading Landing Page",
+
+      features: ["GSAP Animations", "Responsive Design", "Landing Page", "Performance Optimized"],
+      githubUrl: "",
+      id: "08",
+
+      image: Images.zeno_landing,
+
+      liveUrl: "https://zenotraders.com/",
+
+      longDescription:
+        "Developed the complete frontend of a high-performance trading landing page using React, TypeScript, Tailwind CSS, and GSAP with smooth animations and engaging user interactions.",
+
+      shortDescription: "Animation-rich landing page for a trading platform.",
+
+      technologies: ["React", "TypeScript", "GSAP", "Tailwind CSS"],
+      title: "Zeno Traders",
+      year: "2025"
+    },
+
+    {
+      category: "Interactive Website",
+
+      features: ["GSAP Animations", "Responsive", "Reusable Components", "Production Deployment"],
+      githubUrl: "",
+      id: "09",
+
+      image: Images.gsap_landing,
+
+      liveUrl: "https://cocktail-landing-page-tan.vercel.app/",
+
+      longDescription:
+        "Developed a fully responsive website featuring advanced GSAP animations, reusable React components, and optimized deployment using Vercel and GitHub workflows.",
+
+      shortDescription: "Interactive GSAP-powered responsive website.",
+
+      technologies: ["React", "GSAP", "Tailwind CSS", "Vercel"],
+      title: "GSAP Landing Page",
+      year: "2024"
     }
   ],
   ServicesArray: [
@@ -178,7 +336,7 @@ const Constant = {
       },
       {
         category: "Server State",
-        img: "",
+        img: Images.tanstack,
         name: "TanStack Query"
       },
       {
@@ -188,8 +346,8 @@ const Constant = {
       },
       {
         category: "Wallet Connection",
-        img: "",
-        name: "Reown AppKit"
+        img: Images.reown,
+        name: "Reown Kit"
       },
       {
         category: "Blockchain",

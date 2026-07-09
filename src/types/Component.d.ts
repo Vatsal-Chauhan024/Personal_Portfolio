@@ -80,3 +80,25 @@ export interface ServiceCardProps extends Pick<GeneralProps, "className"> {
   timeLine?: GSAPTimeline
   title: string
 }
+
+export interface BrowserFrameProps extends Pick<GeneralProps, "className"> {
+  image: string
+  url?: string
+  year?: string
+}
+
+export interface ProjectInfoProps {
+  category: string
+  description: string
+  features: string[]
+  githubUrl?: string
+  id: string
+  liveUrl: string
+  technologies: string[]
+  title: string
+}
+
+export interface ProjectCardProps {
+  project: ProjectType
+  reverse?: boolean
+}
