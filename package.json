@@ -5,6 +5,7 @@
     "gsap": "^3.15.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-fast-marquee": "^1.6.5",
     "react-router-dom": "^7.18.1",
     "tailwindcss": "^4.3.1",
     "vite-plugin-checker": "^0.14.4"
@@ -33,7 +34,9 @@
     "vite": "^7.1.2"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,json,md}": ["biome check --write ."]
+    "*.{js,ts,tsx,json,md}": [
+      "biome check --write ."
+    ]
   },
   "name": "vite_initial_template",
   "private": true,

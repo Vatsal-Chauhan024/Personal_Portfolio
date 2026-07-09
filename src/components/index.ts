@@ -2,11 +2,13 @@ import InViewStaggerElement from "@/common/inViewStaggerElement/InViewStaggerEle
 import BlurComponent from "./BlurComponent/BlurComponent"
 import CommonButton from "./Buttons/CommonButton"
 import AboutCards from "./Cards/AboutCards"
+import ServiceCard from "./Cards/ServiceCard"
 import Header from "./Header/Header"
 import MenuBtn from "./Header/MenuBtn"
 import HeadingComponent from "./HeadingComponent/HeadingComponent"
 import ImageComponent from "./ImageComponent/ImageComponent"
 import BasicSkeletonLoader from "./Loaders/BasicSkeletonLoader"
+import Numerical from "./Numerical/Numerical"
 import StaggerContainer from "./StaggerContainer/StaggerContainer"
 
 export {
@@ -19,5 +21,7 @@ export {
   ImageComponent,
   InViewStaggerElement,
   MenuBtn,
+  Numerical,
+  ServiceCard,
   StaggerContainer
 }

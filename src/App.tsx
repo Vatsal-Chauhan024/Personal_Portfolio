@@ -4,6 +4,8 @@ import { Header } from "./components"
 import { InsideLayout, Layout } from "./layouts"
 import About from "./sections/About"
 import HeroSection from "./sections/HeroSection"
+import Services from "./sections/Services"
+import Skills from "./sections/Skills"
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
               <InsideLayout>
                 <HeroSection />
                 <About />
+                <Services />
+                <Skills />
               </InsideLayout>
             </Layout>
           }

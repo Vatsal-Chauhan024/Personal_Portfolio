@@ -13,21 +13,23 @@ const InViewStaggerElement = (props: InViewStaggerElementProps) => {
             const element = document.getElementById(id)
             const childrens = element?.children
 
-
             if (!element || !childrens) return
             const elementsToStagger = gsap.utils.toArray(childrens)
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    scroller: "#scroller",
-                    start: "top 95%",
-                    toggleActions: "play none none reverse",
-                    trigger: element
-                }
-            })
-            const timeLineToUse = timeLine ?? tl
+            let tl = timeLine
 
-            timeLineToUse.fromTo(
+            if (!tl) {
+                tl = gsap.timeline({
+                    scrollTrigger: {
+                        scroller: "#scroller",
+                        start: "top 95%",
+                        toggleActions: "play none none reverse",
+                        trigger: element
+                    }
+                })
+            }
+
+            tl.fromTo(
                 elementsToStagger,
                 {
                     opacity: 0,
@@ -38,7 +40,8 @@ const InViewStaggerElement = (props: InViewStaggerElementProps) => {
                     opacity: 1,
                     stagger: staggerAmount ?? 0.3,
                     y: 0
-                }, position
+                },
+                position
             )
         },
         { dependencies: [id] }

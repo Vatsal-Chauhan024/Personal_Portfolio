@@ -15,22 +15,24 @@ const InViewSplitText = (props: InViewSplitTextProps) => {
             if (!element) return
 
             const split = SplitText.create(element, {
-                type,
-
+                type
             })
             const itemToSplit = split?.[type]
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    scroller: "#scroller",
-                    start: "top 95%",
-                    toggleActions: "play none none reverse",
-                    trigger: element
-                }
-            })
-            const timeLineToUse = timeLine ?? tl
+            let tl = timeLine
 
-            timeLineToUse.fromTo(
+            if (!tl) {
+                tl = gsap.timeline({
+                    scrollTrigger: {
+                        scroller: "#scroller",
+                        start: "top 95%",
+                        toggleActions: "play none none reverse",
+                        trigger: element
+                    }
+                })
+            }
+
+            tl.fromTo(
                 itemToSplit,
                 {
                     opacity: 0,
@@ -41,10 +43,11 @@ const InViewSplitText = (props: InViewSplitTextProps) => {
                     opacity: 1,
                     stagger: 0.05,
                     x: 0
-                }, position
+                },
+                position
             )
 
-            timeLineToUse.to(
+            tl.to(
                 element,
                 {
                     "--underline-width": "100%",

@@ -72,3 +72,11 @@ export interface AboutCardProps extends Pick<GeneralProps, "className"> {
   title: string
   value: string
 }
+
+export interface ServiceCardProps extends Pick<GeneralProps, "className"> {
+  description: string
+  secondaryTitle: string
+  subTitle?: string
+  timeLine?: GSAPTimeline
+  title: string
+}

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap");
 
 :root {
   --background: #09090b;
@@ -30,12 +31,15 @@
   --shadow-purple-sm: 0 4px 20px rgba(124, 58, 237, 0.12);
   --shadow-purple-md: 0 10px 35px rgba(124, 58, 237, 0.18);
   --shadow-purple-lg: 0 18px 60px rgba(124, 58, 237, 0.28);
+  --font-heading: "General Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 @theme {
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
-
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-surface-3: var(--surface-3);
@@ -65,9 +69,7 @@
   }
 
   body {
-    @apply min-h-screen overflow-hidden text-white antialiased;
-
-    font-family: "Inter", sans-serif;
+    @apply min-h-screen overflow-hidden text-white antialiased font-heading;
 
     background:
       radial-gradient(ellipse 70% 50% at 50% -10%, rgba(124, 58, 237, 0.18), transparent 70%),
@@ -204,6 +206,35 @@
   box-shadow: var(--glass-highlight), var(--shadow-purple-lg), var(--glow-purple);
 
   transform: translateY(-6px);
+}
+
+@utility elevated_surface {
+  @apply rounded-[28px] border border-white/10 bg-linear-to-br from-surface-2 via-background-secondary to-background transition-all duration-300;
+
+  background-color: var(--glass-bg);
+  border-color: var(--glass-border);
+  box-shadow: var(--shadow-purple-md);
+}
+@utility elevated_surface_hover {
+  @apply hover:-translate-y-2 hover:border-primary/40;
+
+  &:hover {
+    box-shadow: var(--shadow-purple-lg);
+    background-color: var(--glass-bg-hover);
+    border-color: var(--glass-border-hover);
+  }
+}
+
+@utility shadow_purple_sm {
+  box-shadow: var(--shadow-purple-sm);
+}
+
+@utility shadow_purple_md {
+  box-shadow: var(--shadow-purple-md);
+}
+
+@utility shadow_purple_lg {
+  box-shadow: var(--shadow-purple-lg);
 }
 
 @keyframes shimmer_effect {
