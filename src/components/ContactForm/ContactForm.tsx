@@ -14,28 +14,40 @@ const ContactForm = () => {
 
   const handleSubmit = async () => {
     if (!formRef.current) return
-    setLoading(true)
-    emailjs
-      .sendForm("service_25ulpy2", "template_ll1ajtx", formRef.current, "XPYeS0lTz05FFpgcx")
-      .then(
-        result => {
-          if (result) {
-            setLoading(false)
-            setSubmitted(true)
-            setTimeout(() => {
-              setSubmitted(false)
-              setEmail("")
-              setMessage("")
-            }, 5000)
-          } else {
-            toast.error("Error Submitting your response.")
-          }
-        },
-        error => {
-          setLoading(false)
-          toast.error(error.text)
-        }
+
+    try {
+      setLoading(true)
+
+      // 1. Send notification to yourself
+      await emailjs.sendForm(
+        "service_25ulpy2",
+        "template_v8k4v2f",
+        formRef.current,
+        "XPYeS0lTz05FFpgcx"
       )
+
+      // 2. Send auto-reply to the user
+      await emailjs.sendForm(
+        "service_25ulpy2",
+        "template_ll1ajtx",
+        formRef.current,
+        "XPYeS0lTz05FFpgcx"
+      )
+
+      setSubmitted(true)
+
+      setName("")
+      setEmail("")
+      setMessage("")
+
+      setTimeout(() => {
+        setSubmitted(false)
+      }, 5000)
+    } catch {
+      toast.error("Failed to send message. Please try again.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return !submitted ? (
