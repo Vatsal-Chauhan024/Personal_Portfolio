@@ -7,59 +7,59 @@ import { InViewSplitTextProps } from "@/types/Component"
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const InViewSplitText = (props: InViewSplitTextProps) => {
-    const { children, id, type, position, timeLine } = props
-    useGSAP(
-        () => {
-            const element = document.getElementById(id)
+  const { children, id, type, position, timeLine } = props
+  useGSAP(
+    () => {
+      const element = document.getElementById(id)
 
-            if (!element) return
+      if (!element) return
 
-            const split = SplitText.create(element, {
-                type
-            })
-            const itemToSplit = split?.[type]
+      const split = SplitText.create(element, {
+        type: type === "chars" ? "words, chars" : type
+      })
+      const itemToSplit = type === "chars" ? split.chars : split[type]
 
-            let tl = timeLine
+      let tl = timeLine
 
-            if (!tl) {
-                tl = gsap.timeline({
-                    scrollTrigger: {
-                        start: "top 95%",
-                        toggleActions: "play none none reverse",
-                        trigger: element
-                    }
-                })
-            }
+      if (!tl) {
+        tl = gsap.timeline({
+          scrollTrigger: {
+            start: "top 95%",
+            toggleActions: "play none none reverse",
+            trigger: element
+          }
+        })
+      }
 
-            tl.fromTo(
-                itemToSplit,
-                {
-                    opacity: 0,
-                    x: -30
-                },
-                {
-                    duration: 1,
-                    opacity: 1,
-                    stagger: 0.05,
-                    x: 0
-                },
-                position
-            )
-
-            tl.to(
-                element,
-                {
-                    "--underline-width": "100%",
-                    duration: 0.4,
-                    ease: "power2.out"
-                },
-                "-=0.4"
-            )
+      tl.fromTo(
+        itemToSplit,
+        {
+          opacity: 0,
+          x: -30
         },
-        { dependencies: [id] }
-    )
+        {
+          duration: 1,
+          opacity: 1,
+          stagger: 0.05,
+          x: 0
+        },
+        position
+      )
 
-    return children
+      tl.to(
+        element,
+        {
+          "--underline-width": "100%",
+          duration: 0.4,
+          ease: "power2.out"
+        },
+        "-=0.4"
+      )
+    },
+    { dependencies: [id] }
+  )
+
+  return children
 }
 
 export default InViewSplitText

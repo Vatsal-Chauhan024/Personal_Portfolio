@@ -175,13 +175,13 @@ const HeroSection = ({ start }: { start: boolean }) => {
       <div className="flex max-w-lg flex-col gap-5 *:w-fit sm:w-fit sm:flex-row sm:items-center">
         <CommonButton
           buttonContent="View Projects"
-          className="hero_btn whitespace-nowrap opacity-0 translate-y-8"
+          className="hero_btn small_text! font-bold! h-16! sm:whitespace-nowrap opacity-0 translate-y-8"
           onClick={() => onPressBtn("projects")}
         />
 
         <CommonButton
           buttonContent="Contact Me"
-          className="hero_btn whitespace-nowrap opacity-0 translate-y-8"
+          className="hero_btn small_text! font-bold! h-16! sm:whitespace-nowrap opacity-0 translate-y-8"
           onClick={() => onPressBtn("contact_us")}
         />
       </div>

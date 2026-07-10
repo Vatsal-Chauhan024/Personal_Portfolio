@@ -5,15 +5,15 @@ import { Images } from "@/helpers"
 import { BrowserFrameProps } from "@/types/Component"
 
 const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
-    return (
-        <div
-            className={`
+  return (
+    <div
+      className={`
                 group/browser
                 relative
+                w-full
                 overflow-hidden
 
                 rounded-4xl
-
                 border
                 border-white/10
 
@@ -33,10 +33,11 @@ const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
 
                 ${className}
             `}
-        >
-            {/* Glow */}
-            <div
-                className="
+    >
+      {/* Glow */}
+      <div
+        className="
+                    pointer-events-none
                     absolute
                     inset-0
 
@@ -52,95 +53,102 @@ const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
 
                     group-hover/browser:opacity-100
                 "
-            />
+      />
 
-            {/* Header */}
-            <div
-                className="
+      {/* Header */}
+      <div
+        className="
                     relative
                     z-10
-
+                    flex 
+                    flex-col
                     border-b
                     border-white/5
 
                     px-6
                     py-5
                 "
-            >
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <span
-                            className="
-                                size-2.5
-                                rounded-full
-                                bg-green-400
-                                shadow-[0_0_12px_rgba(74,222,128,.6)]
-                            "
-                        />
-
-                        <span className="small_text text-white">Live</span>
-                    </div>
-
-
-                </div>
-
-                <div className="mt-4 flex items-center justify-between">
-                    <span
-                        className="
-                            truncate
-
-                            font-body
-                            text-sm
-                            text-muted
+      >
+        {/* Live */}
+        <div className="flex flex-row items-center gap-3">
+          <span
+            className="
+                            size-2.5
+                            rounded-full
+                            bg-green-400
+                            shadow-[0_0_12px_rgba(74,222,128,.7)]
                         "
-                    >
-                        {url}
-                    </span>
+          />
 
-                    <ImageComponent
-                        className="
-                        [&>img]:object-cover!
-                        cursor-pointer
-                        size-4
-            [&>img]:white__filter
+          <span className="small_text text-white">Live</span>
+        </div>
+
+        {/* URL */}
+        <div className="mt-4 flex sm:justify-between  items-center gap-3">
+          <span
+            className="font-body
+                            text-xs sm:text-sm
+                            text-muted break-all"
+            title={url}
+          >
+            {url}
+          </span>
+
+          <button
+            className="
+                            shrink-0
                             transition-transform
                             duration-300
+
+                            hover:scale-110
 
                             group-hover/browser:translate-x-1
                             group-hover/browser:-translate-y-1
                         "
-                        imgUrl={Images.arrowupright}
-                        onPressImage={() => {
-                            window.open(url, '_blank')
-                        }}
-                    />
-                </div>
-            </div>
+            onClick={() => window.open(url, "_blank")}
+            type="button"
+          >
+            <ImageComponent
+              className="
+                                size-4
+                                [&>img]:object-cover!
+                                [&>img]:white__filter
+                            "
+              imgUrl={Images.arrowupright}
+            />
+          </button>
+        </div>
+      </div>
 
-            <div
-                className="
+      {/* Preview */}
+      <div
+        className="
                     relative
+                    aspect-video
                     overflow-hidden
                     bg-background
                 "
-            >
-                <ImageComponent
-                    className="
-                        aspect-video
+      >
+        <ImageComponent
+          className="
+                        h-full
                         w-full
-                        object-cover
 
-                        transition-all
+                        [&>img]:h-full
+                        [&>img]:w-full
+                        [&>img]:object-cover
+
+                        transition-transform
                         duration-700
 
-                        group-hover/browser:scale-[1.025]
+                        group-hover/browser:scale-[1.03]
                     "
-                    imgUrl={image}
-                />
+          imgUrl={image}
+        />
 
-                {/* Bottom Fade */}
-                <div
-                    className="
+        {/* Bottom Fade */}
+        <div
+          className="
                         pointer-events-none
 
                         absolute
@@ -151,12 +159,13 @@ const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
 
                         bg-linear-to-t
                         from-background
+                        via-background/70
                         to-transparent
                     "
-                />
-            </div>
-        </div>
-    )
+        />
+      </div>
+    </div>
+  )
 }
 
 export default memo(BrowserFrame)
