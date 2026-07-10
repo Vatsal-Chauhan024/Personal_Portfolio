@@ -10,6 +10,7 @@ import HeadingComponent from "./HeadingComponent/HeadingComponent"
 import ImageComponent from "./ImageComponent/ImageComponent"
 import BasicSkeletonLoader from "./Loaders/BasicSkeletonLoader"
 import Numerical from "./Numerical/Numerical"
+import ScrollToTop from "./ScrollToTop/ScrollToTop"
 import StaggerContainer from "./StaggerContainer/StaggerContainer"
 
 export {
@@ -24,6 +25,7 @@ export {
   InViewStaggerElement,
   MenuBtn,
   Numerical,
+  ScrollToTop,
   ServiceCard,
   StaggerContainer
 }

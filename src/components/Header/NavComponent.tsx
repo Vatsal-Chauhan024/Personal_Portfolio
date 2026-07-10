@@ -12,7 +12,7 @@ const NavComponent = ({ className = "", onLinkClick }: NavComponentProps) => (
   >
     {Constant.NavArray.map(item => (
       <button
-        className="basic_hover_animation uppercase px-4 text-primary hover:text-primary-light"
+        className="basic_hover_animation uppercase px-4 text-secondary hover:text-secodary-light"
         key={item.id}
         onClick={() => onLinkClick?.(item.id)}
         type="button"

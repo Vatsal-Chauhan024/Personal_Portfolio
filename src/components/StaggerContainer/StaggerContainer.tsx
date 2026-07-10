@@ -21,7 +21,7 @@ const StaggerContainer = (props: StaggerContainerProps) => {
           y: -10
         },
         {
-          duration: 1,
+          duration: 0.2,
           ease: "power3.out",
           opacity: 1,
           stagger: staggerAmount,

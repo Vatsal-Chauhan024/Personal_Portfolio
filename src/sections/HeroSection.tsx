@@ -1,86 +1,147 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
-import { useCallback } from "react"
+import { useCallback, useRef } from "react"
 
 import { CommonButton, HeadingComponent } from "@/components"
 import { English } from "@/helpers"
 
 gsap.registerPlugin(SplitText)
 
-const HeroSection = () => {
-    const onPressBtn = useCallback((id: "#projects" | "#contact_us") => {
-        const scroller = document.getElementById("scroller")
-        const section = document.getElementById(id)
+const HeroSection = ({ start }: { start: boolean }) => {
+    const containerRef = useRef<HTMLElement | null>(null)
 
-        if (scroller && section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" })
+    const onPressBtn = useCallback((id: "#projects" | "#contact_us") => {
+        const section = document.getElementById(id)
+        if (section) {
+            window.scrollTo({
+                behavior: "smooth",
+                top: section.offsetTop - 80
+            })
         }
     }, [])
 
     useGSAP(
         () => {
-            const textSplitter = SplitText.create("#identifier", { type: "words" })
-            const textSplitter2 = SplitText.create("#description", { type: "words" })
-            const timeLine = gsap.timeline({
+            if (!start || !containerRef.current) return
+
+            const identifier = containerRef.current.querySelector("#identifier")
+            const description = containerRef.current.querySelector("#description")
+
+            if (!identifier || !description) return
+
+            const titleSplit = SplitText.create(identifier, {
+                type: "words"
+            })
+
+            const descriptionSplit = SplitText.create(description, {
+                type: "words"
+            })
+
+            const heroTexts = gsap.utils.toArray<HTMLElement>(".hero_text")
+            const buttons = gsap.utils.toArray<HTMLElement>(".hero_btn")
+
+            // Initial State
+            gsap.set(containerRef.current, {
+                autoAlpha: 0
+            })
+
+            gsap.set(heroTexts, {
+                x: "-100%"
+            })
+
+            gsap.set(buttons, {
+                opacity: 0,
+                y: 30
+            })
+
+            gsap.set(titleSplit.words, {
+                opacity: 0,
+                y: -30
+            })
+
+            gsap.set(descriptionSplit.words, {
+                opacity: 0,
+                x: -30
+            })
+
+            const tl = gsap.timeline({
                 defaults: {
-                    ease: "power2.inOut"
+                    ease: "power2.out"
                 }
             })
-            textSplitter.words?.forEach(item => {
-                timeLine.set(item, { opacity: 0, y: -30 })
-            })
-            textSplitter2.words?.forEach(item => {
-                timeLine.set(item, { opacity: 0, x: -30 })
-            })
-            const elements = document.querySelectorAll(".hero_text")
-            const btnElements = document.querySelectorAll(".hero_btn")
-            timeLine.set(btnElements, { opacity: 0, y: -30 })
-            timeLine.fromTo(
-                elements,
+
+            tl.to(
+                containerRef.current,
                 {
-                    x: "-100%"
+                    autoAlpha: 1,
+                    duration: 0.3
                 },
-                {
-                    duration: 1.5,
-                    stagger: 0.06,
-                    x: 0
-                }
+                0
             )
-            timeLine.to(textSplitter.words, {
-                duration: 0.19,
-                opacity: 1,
-                stagger: 0.04,
-                y: 0
-            })
-            timeLine.to(
-                textSplitter2.words,
-                {
-                    duration: 0.19,
-                    opacity: 1,
-                    stagger: 0.04,
-                    x: 0
-                },
-                "-=0.05"
-            )
-            timeLine.to(
-                btnElements,
-                {
-                    duration: 0.5,
-                    opacity: 1,
-                    stagger: 0.3,
-                    y: 0
-                },
-                "-=0.05"
-            )
+
+                .to(
+                    heroTexts,
+                    {
+                        duration: 1.3,
+                        stagger: 0.08,
+                        x: 0
+                    },
+                    0
+                )
+
+                .to(
+                    titleSplit.words,
+                    {
+                        duration: 0.25,
+                        opacity: 1,
+                        stagger: 0.05,
+                        y: 0
+                    },
+                    "-=0.6"
+                )
+
+                .to(
+                    descriptionSplit.words,
+                    {
+                        duration: 0.25,
+                        opacity: 1,
+                        stagger: 0.04,
+                        x: 0
+                    },
+                    "-=0.1"
+                )
+
+                .to(
+                    buttons,
+                    {
+                        duration: 0.5,
+                        opacity: 1,
+                        stagger: 0.15,
+                        y: 0
+                    },
+                    "-=0.1"
+                )
+
+            return () => {
+                titleSplit.revert()
+                descriptionSplit.revert()
+            }
         },
-        { dependencies: [] }
+        {
+            dependencies: [start],
+            scope: containerRef
+        }
     )
 
     return (
         <section
-            className="space-y-12 relative pb-20 h-screen"
+            className="relative h-screen space-y-12 pb-20"
             id="hero"
+            ref={containerRef}
+            style={{
+                visibility: start ? "visible" : "hidden"
+            }}
         >
             <div>
                 <HeadingComponent
@@ -88,17 +149,19 @@ const HeroSection = () => {
                     heading_variant="hero"
                     singleLineContent={English.E3}
                 />
+
                 <HeadingComponent
                     className="hero_text linear_gradient_utility bg-clip-text text-transparent"
                     heading_variant="hero"
                     singleLineContent={English.E8}
                 />
             </div>
+
             <h1
-                className="h3_heading text-secondary-light tracking-wide"
+                className="h3_heading tracking-wide text-secondary-light"
                 id="identifier"
             >
-                Frontend Engineer • React • TypeScript • Web3
+                • React • TypeScript • Web3
             </h1>
 
             <p
@@ -109,22 +172,17 @@ const HeroSection = () => {
                 Web3.
             </p>
 
-            <div className="flex  gap-5 sm:flex-row flex-col sm:items-center max-w-lg sm:w-fit *:w-fit">
+            <div className="flex max-w-lg flex-col gap-5 *:w-fit sm:w-fit sm:flex-row sm:items-center">
                 <CommonButton
                     buttonContent="View Projects"
-                    className="hero_btn whitespace-nowrap"
-                    onClick={(e) => {
-                        e.stopPropagation()
-                        onPressBtn('#projects')
-                    }}
+                    className="hero_btn whitespace-nowrap opacity-0 translate-y-8"
+                    onClick={() => onPressBtn("#projects")}
                 />
+
                 <CommonButton
                     buttonContent="Contact Me"
-                    className="hero_btn whitespace-nowrap"
-                    onClick={(e) => {
-                        e.stopPropagation()
-                        onPressBtn('#contact_us')
-                    }}
+                    className="hero_btn whitespace-nowrap opacity-0 translate-y-8"
+                    onClick={() => onPressBtn("#contact_us")}
                 />
             </div>
         </section>

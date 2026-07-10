@@ -41,6 +41,7 @@ const Header = () => {
           <StaggerContainer
             id="stagger_elements"
             performAction={isAnimateNow}
+            staggerAmount={0.08}
           >
             <NavComponent
               className="*:opacity-0"

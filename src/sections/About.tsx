@@ -55,7 +55,7 @@ const About = () => {
                             className="normal_body leading-[1.7em] text-secondary-light font-semibold sm:max-w-2xl"
                             id="about_description"
                         >
-                            I'm a Frontend Engineer with 2 years of experience building modern React applications,
+                            I'm a Frontend Developer with 2 years of experience building modern React applications,
                             interactive GSAP animations, and scalable Web3 products. I focus on creating fast,
                             responsive, and user-centric experiences while collaborating with clients and
                             cross-functional teams.
