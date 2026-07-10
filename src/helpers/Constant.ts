@@ -345,6 +345,11 @@ const Constant = {
         name: "GSAP"
       },
       {
+        category: "Charting",
+        img: Images.tradingview,
+        name: "TradingView Charting Library"
+      },
+      {
         category: "Component Library",
         img: Images.shadcn,
         name: "ShadCN UI"

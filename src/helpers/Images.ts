@@ -36,6 +36,7 @@ const Images = {
   shadcn: new URL("../assets/svgs/shadcn.svg", import.meta.url).href,
   tailwind: new URL("../assets/svgs/tailwind.svg", import.meta.url).href,
   tanstack: new URL("../assets/static_assets/tanstack.png", import.meta.url).href,
+  tradingview: new URL("../assets/svgs/tradingview.svg", import.meta.url).href,
   typescript: new URL("../assets/svgs/typescript.svg", import.meta.url).href,
   uparrow: new URL("../assets/svgs/uparrow.svg", import.meta.url).href,
   vercel: new URL("../assets/svgs/vercel.svg", import.meta.url).href,
