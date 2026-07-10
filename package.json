@@ -35,10 +35,11 @@
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "lint-staged": {
-    "*.{js,ts,tsx,json,md}": [
-      "biome check --write ."
-    ]
+    "*.{js,ts,tsx,json,md}": ["biome check --write ."]
   },
   "name": "vite_initial_template",
   "private": true,
