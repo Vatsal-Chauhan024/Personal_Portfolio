@@ -335,6 +335,11 @@ const Constant = {
         name: "React"
       },
       {
+        category: "Frontend",
+        img: Images.next,
+        name: "Next.js"
+      },
+      {
         category: "Styling",
         img: Images.tailwind,
         name: "Tailwind CSS"

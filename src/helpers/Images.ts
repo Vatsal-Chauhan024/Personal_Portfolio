@@ -27,6 +27,7 @@ const Images = {
   linkedIn: new URL("../assets/svgs/linkedIn.svg", import.meta.url).href,
   logo: new URL("../assets/svgs/logo.svg", import.meta.url).href,
   menu: new URL("../assets/svgs/menu.svg", import.meta.url).href,
+  next: new URL("../assets/svgs/next.svg", import.meta.url).href,
   postman: new URL("../assets/svgs/postman.svg", import.meta.url).href,
   prettier: new URL("../assets/svgs/prettier.svg", import.meta.url).href,
   prospera_admin: new URL("../assets/static_assets/prospera_admin.png", import.meta.url).href,
