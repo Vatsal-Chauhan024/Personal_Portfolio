@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <OpacityContainer
-      className="px-12 py-5 fixed inset-0 h-20 text-primary z-30 w-screen bg-background-secondary/50 backdrop-blur-lg"
+      className="px-12 py-5 sticky top-0 inset-0 h-20 text-primary z-30 w-screen bg-background-secondary/50 backdrop-blur-lg"
       from={{
         height: 0
       }}
@@ -45,19 +45,20 @@ const Header = () => {
             <NavComponent
               className="*:opacity-0"
               onLinkClick={id => {
-                const scroller = document.getElementById("scroller")
                 const section = document.getElementById(id)
 
-                if (scroller && section) {
-                  section.scrollIntoView({ behavior: "smooth", block: "start" })
+                if (section) {
+                  window.scrollTo({
+                    behavior: "smooth",
+                    top: section.offsetTop - 80
+                  })
                 }
               }}
             />
           </StaggerContainer>
         ) : (
           <MenuBtn />
-        )
-        }
+        )}
       </div>
     </OpacityContainer>
   )

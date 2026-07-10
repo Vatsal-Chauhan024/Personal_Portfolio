@@ -13,6 +13,7 @@ const MenuBtn = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null)
   const closeBtnRef = useRef<HTMLButtonElement | null>(null)
   const timeLineRef = useRef<GSAPTimeline | null>(null)
+  const pendAnimationRef = useRef<string | null>(null)
 
   useGSAP(() => {
     if (!overlayRef.current || !closeBtnRef.current) return
@@ -41,12 +42,26 @@ const MenuBtn = () => {
       defaults: {
         ease: "power2.inOut"
       },
+      onReverseComplete: () => {
+        if (!pendAnimationRef.current) return
+
+        const section = document.getElementById(pendAnimationRef.current)
+
+        if (section) {
+          window.scrollTo({
+            behavior: "smooth",
+            top: section.offsetTop - 80
+          })
+        }
+
+        pendAnimationRef.current = null
+      },
       paused: true
     })
 
     timeLineRef.current
       .to(overlayRef.current, {
-        duration: 0.8,
+        duration: 0.5,
         height: "100vh",
         opacity: 1,
         width: "100vw"
@@ -55,7 +70,7 @@ const MenuBtn = () => {
         closeBtnRef.current,
         {
           delay: 0.1,
-          duration: 0.5,
+          duration: 0.2,
           opacity: 1,
           scale: 1
         },
@@ -64,7 +79,7 @@ const MenuBtn = () => {
       .to(
         childrenElement,
         {
-          duration: 0.6,
+          duration: 0.3,
           opacity: 1,
           stagger: 0.08,
           y: 0
@@ -124,8 +139,9 @@ const MenuBtn = () => {
 
         <NavComponent
           className="flex h-screen w-screen flex-col items-center justify-center gap-6"
-          onLinkClick={() => {
+          onLinkClick={id => {
             setIsMenuOpen(false)
+            pendAnimationRef.current = id
           }}
         />
       </div>

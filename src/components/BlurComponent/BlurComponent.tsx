@@ -10,6 +10,7 @@ size-125
 rounded-full
 bg-primary/30
 blur-[180px]
+-z-10   
 "/>
     )
 }

@@ -5,7 +5,7 @@ import { Constant } from "@/helpers"
 const About = () => {
     return (
         <section
-            className="pb-6"
+            className="py-14"
             id="about"
         >
             <div className="grid gap-5 grid-cols-1 lg:grid-cols-2">

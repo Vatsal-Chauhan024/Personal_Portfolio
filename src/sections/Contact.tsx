@@ -5,11 +5,11 @@ import { Constant } from "@/helpers"
 const Contact = () => {
     return (
         <section
-            className="py-7 sm:py-14 lg:py-28 space-y-12"
+            className="py-14 space-y-12"
             id="contact_us"
         >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="space-y-10">
+            <div className="grid md:flex gap-5">
+                <div className="space-y-10 md:w-1/3">
                     <InViewSplitText
                         id="footer_heading"
                         type="chars"
@@ -24,7 +24,7 @@ leading-tight
 break-normal"
                             id="footer_heading"
                         >
-                            LET'S BUILD SOMETHING EXCEPTIONAL{" "}
+                            LET'S BUILD <br /> SOMETHING <br /> EXCEPTIONAL{" "}
                         </p>
                     </InViewSplitText>
                     <InViewSplitText

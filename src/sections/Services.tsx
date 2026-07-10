@@ -11,7 +11,6 @@ const Services = () => {
   useGSAP(() => {
     servicesTl.current = gsap.timeline({
       scrollTrigger: {
-        scroller: "#scroller",
         start: "top 90%",
         toggleActions: "play none none reverse",
         trigger: "#service_details"
@@ -21,7 +20,7 @@ const Services = () => {
 
   return (
     <section
-      className="py-7 sm:py-14 lg:py-28 space-y-12"
+      className="py-14 space-y-12"
       id="services"
     >
       <InViewSplitText
@@ -48,30 +47,30 @@ const Services = () => {
           applications with a focus on quality, performance and user experience.
         </p>
       </InViewSplitText>
-      
-        <InViewStaggerElement
+
+      <InViewStaggerElement
+        id="service_details"
+        timeLine={servicesTl.current!}
+      >
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
           id="service_details"
-          timeLine={servicesTl.current!}
         >
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-            id="service_details"
-          >
-            {Constant.ServicesArray?.map(service => {
-              const { description, id, label, title } = service
-              return (
-                <ServiceCard
-                  description={description}
-                  key={title}
-                  secondaryTitle={label}
-                  subTitle={id}
-                  title={title}
-                />
-              )
-            })}
-          </div>
-        </InViewStaggerElement>
-     
+          {Constant.ServicesArray?.map(service => {
+            const { description, id, label, title } = service
+            return (
+              <ServiceCard
+                description={description}
+                key={title}
+                secondaryTitle={label}
+                subTitle={id}
+                title={title}
+              />
+            )
+          })}
+        </div>
+      </InViewStaggerElement>
+
     </section>
   )
 }

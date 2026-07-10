@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard"
 const Projects = () => {
     return (
         <section
-            className="py-7 sm:py-14 lg:py-28 space-y-12"
+            className="py-14 space-y-12"
             id="projects"
         >
             <InViewSplitText

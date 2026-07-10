@@ -6,6 +6,7 @@ import InViewSplitText from "@/common/InViewSplitText/InViewSplitText"
 
 const ContactForm = () => {
     const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
     const [message, setMessage] = useState("")
     const formRef = useRef<null | HTMLFormElement>(null)
     const [loading, setLoading] = useState(false)
@@ -15,7 +16,7 @@ const ContactForm = () => {
         if (!formRef.current) return
         setLoading(true)
         emailjs
-            .sendForm("service_6trfoaf", "template_y049i7q", formRef.current, "nPK35fwFr1NciqDMp")
+            .sendForm("service_25ulpy2", "template_ll1ajtx", formRef.current, "XPYeS0lTz05FFpgcx")
             .then(
                 result => {
                     if (result) {
@@ -39,7 +40,7 @@ const ContactForm = () => {
 
     return !submitted ? (
         <form
-            className="space-y-5 py-8 px-5 bg-surface border border-solid border-border rounded-md"
+            className="space-y-5 md:w-2/3 py-8 px-5 bg-surface border border-solid border-border rounded-md"
             onSubmit={e => {
                 e.stopPropagation()
                 e.preventDefault()
@@ -58,6 +59,27 @@ const ContactForm = () => {
                     Reach Me Out
                 </p>
             </InViewSplitText>
+            <input
+                className="
+                    h-14
+                    w-full
+                    rounded-2xl
+                    border
+                    border-border
+                    bg-surface
+                    px-5
+                    outline-none
+                    transition-all
+                    focus:border-primary
+                    focus:shadow-purple-sm
+                "
+                name="to_name"
+                onChange={e => setName(e.target.value)}
+                placeholder="Full Name"
+                required
+                type="text"
+                value={name}
+            />
             <input
                 className="
                     h-14
@@ -117,8 +139,8 @@ const ContactForm = () => {
                     disabled:opacity-50
                     disabled:pointer-events-none
                 "
-                disabled={loading || email.trim() === "" || message.trim() === ""}
-                type="button"
+                disabled={loading || email.trim() === "" || message.trim() === "" || name.trim() === ""}
+                type="submit"
             >
                 {loading ? (
                     <>

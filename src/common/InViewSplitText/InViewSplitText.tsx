@@ -24,7 +24,6 @@ const InViewSplitText = (props: InViewSplitTextProps) => {
             if (!tl) {
                 tl = gsap.timeline({
                     scrollTrigger: {
-                        scroller: "#scroller",
                         start: "top 95%",
                         toggleActions: "play none none reverse",
                         trigger: element

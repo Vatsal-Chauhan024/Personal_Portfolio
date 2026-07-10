@@ -21,7 +21,6 @@ const InViewStaggerElement = (props: InViewStaggerElementProps) => {
             if (!tl) {
                 tl = gsap.timeline({
                     scrollTrigger: {
-                        scroller: "#scroller",
                         start: "top 95%",
                         toggleActions: "play none none reverse",
                         trigger: element

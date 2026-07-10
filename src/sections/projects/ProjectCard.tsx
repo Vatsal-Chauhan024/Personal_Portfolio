@@ -27,7 +27,6 @@ const ProjectCard = ({ project, reverse = false }: ProjectCardProps) => {
                 opacity: 1,
                 scale: 1,
                 scrollTrigger: {
-                    scroller: "#scroller",
                     start: "top 75%",
                     toggleActions: "play none none reverse",
                     trigger: sectionRef.current

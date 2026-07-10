@@ -44,6 +44,10 @@ const Constant = {
   ],
   NavArray: [
     {
+      id: "hero",
+      name: "Home"
+    },
+    {
       id: "about",
       name: English.E4
     },
@@ -55,6 +59,10 @@ const Constant = {
     {
       id: "projects",
       name: English.E6
+    },
+    {
+      id: "contact_us",
+      name: "Contact"
     }
   ],
   ProjectsArray: [

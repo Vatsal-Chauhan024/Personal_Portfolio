@@ -69,7 +69,7 @@
   }
 
   body {
-    @apply min-h-screen overflow-hidden text-white antialiased font-heading;
+    @apply  w-screen overflow-y-auto overflow-x-hidden text-white antialiased font-heading;
 
     background:
       radial-gradient(ellipse 70% 50% at 50% -10%, rgba(124, 58, 237, 0.18), transparent 70%),

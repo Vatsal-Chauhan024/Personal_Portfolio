@@ -24,22 +24,23 @@ const App = () => {
         position="top-right"
         rtl={false}
         theme="light"
-        transition={Bounce}
       />
       <Routes>
         <Route
           element={
-            <Layout>
+            <>
               <Header />
-              <InsideLayout>
-                <HeroSection />
-                <About />
-                <Services />
-                <Skills />
-                <Projects />
-                <Contact />
-              </InsideLayout>
-            </Layout>
+              <Layout>
+                <InsideLayout>
+                  <HeroSection />
+                  <About />
+                  <Services />
+                  <Skills />
+                  <Projects />
+                  <Contact />
+                </InsideLayout>
+              </Layout>
+            </>
           }
           index
           key="base"

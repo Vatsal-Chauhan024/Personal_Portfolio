@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
+import { useCallback } from "react"
 
 import { CommonButton, HeadingComponent } from "@/components"
 import { English } from "@/helpers"
@@ -8,6 +9,15 @@ import { English } from "@/helpers"
 gsap.registerPlugin(SplitText)
 
 const HeroSection = () => {
+    const onPressBtn = useCallback((id: "#projects" | "#contact_us") => {
+        const scroller = document.getElementById("scroller")
+        const section = document.getElementById(id)
+
+        if (scroller && section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
+    }, [])
+
     useGSAP(
         () => {
             const textSplitter = SplitText.create("#identifier", { type: "words" })
@@ -53,19 +63,23 @@ const HeroSection = () => {
                 },
                 "-=0.05"
             )
-            timeLine.to(btnElements, {
-                duration: 0.5,
-                opacity: 1,
-                stagger: 0.3,
-                y: 0
-            }, "-=0.05")
+            timeLine.to(
+                btnElements,
+                {
+                    duration: 0.5,
+                    opacity: 1,
+                    stagger: 0.3,
+                    y: 0
+                },
+                "-=0.05"
+            )
         },
         { dependencies: [] }
     )
 
     return (
         <section
-            className="space-y-12 relative py-20 h-screen"
+            className="space-y-12 relative pb-20 h-screen"
             id="hero"
         >
             <div>
@@ -95,14 +109,22 @@ const HeroSection = () => {
                 Web3.
             </p>
 
-            <div className="flex  gap-5 flex-row flex-wrap sm:items-center max-w-lg sm:w-fit *:w-fit">
+            <div className="flex  gap-5 sm:flex-row flex-col sm:items-center max-w-lg sm:w-fit *:w-fit">
                 <CommonButton
                     buttonContent="View Projects"
-                    className="hero_btn flex-1 whitespace-nowrap"
+                    className="hero_btn whitespace-nowrap"
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        onPressBtn('#projects')
+                    }}
                 />
                 <CommonButton
-                    buttonContent="Download"
-                    className="hero_btn flex-1 whitespace-nowrap"
+                    buttonContent="Contact Me"
+                    className="hero_btn whitespace-nowrap"
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        onPressBtn('#contact_us')
+                    }}
                 />
             </div>
         </section>
