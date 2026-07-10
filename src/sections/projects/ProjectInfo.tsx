@@ -10,7 +10,7 @@ const ProjectInfo = (props: ProjectInfoProps) => {
   return (
     <div className="flex h-full flex-col justify-center">
       <Numerical
-        className="relative"
+        className="relative left-2!"
         singleLineContent={id}
       />
 
