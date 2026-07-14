@@ -56,8 +56,9 @@ const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
       />
 
       {/* Header */}
-      <div
-        className="
+      {url !== "" && (
+        <div
+          className="
                     relative
                     z-10
                     flex 
@@ -68,34 +69,34 @@ const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
                     px-6
                     py-5
                 "
-      >
-        {/* Live */}
-        <div className="flex flex-row items-center gap-3">
-          <span
-            className="
+        >
+          {/* Live */}
+          <div className="flex flex-row items-center gap-3">
+            <span
+              className="
                             size-2.5
                             rounded-full
                             bg-green-400
                             shadow-[0_0_12px_rgba(74,222,128,.7)]
                         "
-          />
+            />
 
-          <span className="small_text text-white">Live</span>
-        </div>
+            <span className="small_text text-white">Live</span>
+          </div>
 
-        {/* URL */}
-        <div className="mt-4 flex sm:justify-between  items-center gap-3">
-          <span
-            className="font-body
+          {/* URL */}
+          <div className="mt-4 flex sm:justify-between  items-center gap-3">
+            <span
+              className="font-body
                             text-xs sm:text-sm
                             text-muted break-all"
-            title={url}
-          >
-            {url}
-          </span>
+              title={url}
+            >
+              {url}
+            </span>
 
-          <button
-            className="
+            <button
+              className="
                             shrink-0
                             transition-transform
                             duration-300
@@ -105,20 +106,21 @@ const BrowserFrame = ({ image, url, className = "" }: BrowserFrameProps) => {
                             group-hover/browser:translate-x-1
                             group-hover/browser:-translate-y-1
                         "
-            onClick={() => window.open(url, "_blank")}
-            type="button"
-          >
-            <ImageComponent
-              className="
+              onClick={() => window.open(url, "_blank")}
+              type="button"
+            >
+              <ImageComponent
+                className="
                                 size-4
                                 [&>img]:object-cover!
                                 [&>img]:white__filter
                             "
-              imgUrl={Images.arrowupright}
-            />
-          </button>
+                imgUrl={Images.arrowupright}
+              />
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Preview */}
       <div

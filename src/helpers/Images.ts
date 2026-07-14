@@ -43,6 +43,7 @@ const Images = {
   vercel: new URL("../assets/svgs/vercel.svg", import.meta.url).href,
   vscode: new URL("../assets/svgs/vscode.svg", import.meta.url).href,
   wagmi: new URL("../assets/svgs/wagmi.svg", import.meta.url).href,
+  web: new URL("../assets/static_assets/web.png", import.meta.url).href,
   zeno_landing: new URL("../assets/static_assets/zeno_landing.png", import.meta.url).href,
   zoho: new URL("../assets/svgs/zoho.svg", import.meta.url).href
 }

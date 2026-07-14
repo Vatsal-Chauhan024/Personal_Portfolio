@@ -110,93 +110,31 @@ const Constant = {
     },
 
     {
-      category: "Web3 Member Portal",
+      category: "Web3 Portal",
 
       features: ["Wallet Connect", "Smart Contracts", "Blockchain Transactions", "Responsive UI"],
       githubUrl: "",
       id: "03",
 
-      image: Images.cyber_member,
+      image: Images.web,
 
-      liveUrl: "https://member.cybercoin.finance/",
+      liveUrl: "",
 
-      longDescription:
-        "Independently developed the complete frontend of a Web3 member portal using React, TypeScript, TanStack Query, Wagmi, and Reown Kit. Integrated smart contracts, wallet authentication, and blockchain interactions for international users.",
+      longDescription: `Independently developed the complete frontend of a Web3 member portal using React, TypeScript, TanStack Query, Wagmi, and Reown AppKit. Contributed to the admin dashboard by implementing key features, integrating smart contracts, wallet authentication, blockchain interactions, and responsive interfaces for a scalable decentralized application.`,
 
-      shortDescription: "Production Web3 MLM member portal with blockchain integration.",
-
-      technologies: ["React", "TypeScript", "TanStack Query", "Wagmi", "Reown Kit", "Tailwind CSS"],
-      title: "Cyber Coin Member",
-      year: "2025"
-    },
-
-    {
-      category: "Web3 Admin Dashboard",
-
-      features: ["Admin Dashboard", "Wallet Integration", "Blockchain Data", "Role Management"],
-      githubUrl: "",
-      id: "04",
-
-      image: Images.cyber_admin,
-
-      liveUrl: "https://cyber-coin-admin.vercel.app/",
-
-      longDescription:
-        "Developed the frontend of a production-grade Web3 admin panel with blockchain integrations, secure administrative workflows, and scalable dashboard architecture.",
-
-      shortDescription: "Administrative dashboard for managing Web3 MLM operations.",
-
-      technologies: ["React", "TypeScript", "TanStack Query", "Wagmi", "Tailwind CSS", "Reown Kit"],
-      title: "Cyber Coin Admin",
-      year: "2025"
-    },
-
-    {
-      category: "Web3 Application",
-
-      features: ["Wallet Connect", "Smart Contracts", "Blockchain", "Responsive Design"],
-      githubUrl: "",
-      id: "05",
-
-      image: Images.prospera_member,
-
-      liveUrl: "https://www.prosperadao.pro/",
-
-      longDescription:
-        "Built the complete frontend of a production-grade Web3 application featuring secure wallet connections, blockchain interactions, and responsive user experiences.",
-
-      shortDescription: "Production decentralized application with secure wallet connectivity.",
+      shortDescription:
+        "Production Web3 Referral  Member & Admin portal with blockchain integration.",
 
       technologies: [
         "React",
         "TypeScript",
-        "Tailwind CSS",
+        "TanStack Query",
         "Wagmi",
-        "Smart Contracts",
-        "Reown Kit"
+        "Reown Kit",
+        "Tailwind CSS",
+        "Ether.js"
       ],
-      title: "Prospera DAO",
-      year: "2025"
-    },
-
-    {
-      category: "Web3 Admin Dashboard",
-
-      features: ["Admin Dashboard", "Blockchain", "Smart Contracts", "Responsive UI"],
-      githubUrl: "",
-      id: "06",
-
-      image: Images.prospera_admin,
-
-      liveUrl: "https://prospera-admin-frontend.vercel.app/",
-
-      longDescription:
-        "Developed a production-grade Web3 admin dashboard using React, TypeScript, Tailwind CSS, and Ethers.js with secure blockchain interactions and responsive administration panels.",
-
-      shortDescription: "Administrative dashboard for decentralized ecosystem management.",
-
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Ethers.js", "Smart Contracts"],
-      title: "Prospera DAO Admin",
+      title: "Web3 Referral Based Admin & Member Panel",
       year: "2025"
     },
 
